@@ -11,14 +11,7 @@
 
 This website has been built for a xxxxxxx as part of a marketing campaign to :<br>
 
-* Promote and sell the treatment service being offered.
-* Provide information about Bowen Therapy.
-* Provide information about the Treatment as well as the treatment process and pricing.
-* Provide information about and build confidence in the therapist.
-* Provide booking information for prospective patients.
-* Provide information about events the therapist is attending or recommends attending and offers.
-
-The primary aim of the site once landed on is to encourage the user to call/contact the Therapist.
+* 
 
 ## 1. UX
 
