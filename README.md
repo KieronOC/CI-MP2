@@ -1,10 +1,13 @@
 #  <span style="color:#da4699"> Milestone Project 2 </span>
 
-![ML Bowen Logo](assets/logos/MLBowenandstickmen7.jpg)
+##  <span style="color:#da4699">_Interactive Front End Development Project_</span>
+
+
+<!-- ![ML Bowen Logo](assets/logos/MLBowenandstickmen7.jpg) -->
 
 ***
 
-# Sailing Team Management & Communication (www.mlbowen.com) 
+# Sailing Team Management & Communication
 ![GB Flag](https://github.githubassets.com/images/icons/emoji/unicode/1f1ec-1f1e7.png?v8 )
 
 ## Background Description
