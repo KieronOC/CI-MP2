@@ -1,17 +1,26 @@
-console.log("JS Connected");
+document.addEventListener("DOMContentLoaded", function() {
 
+});
 
 var cards = document.getElementsByClassName('carD');
 console.log(cards);
 
-// cards[0].addEventListener('click', changeColour);
+cards[1].addEventListener('click', change1);
 
-for (var i = 0; i < cards.length; i++) {
-    cards[i].addEventListener('click', changeColour)
+// function change() {
+//     cards[0].style.borderColor = 'red';
+// };
+
+// function change() {
+//     cards[1].classList.toggle('test');
+// };
+
+function change1() {
+
+    cards[1].firstChild.src = "/assets/images/Heron.jpg";
+    setTimeout(flickback, 5000)
 }
 
-
-function changeColour() {
-    cards[i].classList.add('imgD1');
-    console.log(cards[i].className);
+function flickback() {
+    cards[1].firstChild.src = "/assets/images/Card_Front.png";
 }
