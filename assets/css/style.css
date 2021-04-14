@@ -1,0 +1,35 @@
+/* Background Image */
+
+#backImage {
+    background-image: url("/assets/images/fastnet-people2.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+}
+
+#fade {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(245, 241, 239, 0.466);
+    background-size: cover;
+}
+
+
+/* Title */
+
+.title {
+    position: ;
+}
+
+
+/* Cards */
+
+.card {
+    background-color: blueviolet;
+    width: 20mm;
+    height: 45mm;
+    margin: 40px;
+}
