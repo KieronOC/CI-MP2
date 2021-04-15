@@ -10,12 +10,23 @@ var img2 = "/assets/images/Nat12.jpg"
 var img3 = "/assets/images/Enterprise.jpg"
 var img4 = "/assets/images/Gull.jpg"
 var img5 = "/assets/images/Heron.jpg"
+var img6 = "/assets/images/solo.jpg"
+
+// Find out the screen size
+
+var screenH = window.innerHeight;
+var screenW = window.innerWidth;
+
+console.log(screenW);
+console.log(screenH);
+
 
 
 // Put all the cards into an array
 
 var cards = document.getElementsByClassName('carD');
-console.log(cards);
+var noCards = cards;
+console.log(noCards);
 
 // Start the game
 var start = document.getElementById('start');
@@ -46,14 +57,42 @@ function shuffleArray() {
         seQuence[i] = seQuence[j];
         seQuence[j] = temp;
     }
-    console.log(seQuence);
+
     return seQuence;
 }
 
 var positions = (shuffleArray());
-console.log('These are the card position' + positions);
+console.log('These are the card positions : ' + positions);
 console.log(positions);
 
+// Position cards based on shuffle
+
+function setoutCards() {
+    var setCards = document.getElementById('cardBox');
+    var cardArr = [];
+    for (var i = 0; i <= cards; i++) {
+        cardArr.push(setCards.children[i]);
+        console.log(cardArr);
+    }
+
+
+    // for (var i = 0; i < setCards.length; i++) {
+    //     setCards.remove(setCards);
+}
+// console.log(setCards);
+
+console.log(setoutCards());
+
+// for (var i = 0; i < cards; i++); {
+//     var cardBlank = (`<div id="${i}" class="${'c'+i}+carD col-xs-2 col-sm-2"><img class="imgD2" src="/assets/images/Card_Front.png" /></div>`);
+//     setCards[positions[i]] = cardBlank;
+// };
+//     console.log(setCards);
+//     return setCards;
+// }
+
+
+// console.log(cards[3]);
 
 
 // for (var i = 0; i <= cards.length; i++) {
@@ -72,8 +111,8 @@ console.log(positions);
 
 
 
-cards[1].addEventListener('click', change1);
-cards[2].addEventListener('click', change2);
+// cards[1].addEventListener('click', change1);
+// cards[2].addEventListener('click', change2);
 
 // function change() {
 //     cards[0].style.borderColor = 'red';
