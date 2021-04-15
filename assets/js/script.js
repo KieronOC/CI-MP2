@@ -67,21 +67,29 @@ console.log(positions);
 
 // Position cards based on shuffle
 
-function setoutCards() {
-    var setCards = document.getElementById('cardBox');
-    var cardArr = [];
-    for (var i = 0; i <= cards; i++) {
-        cardArr.push(setCards.children[i]);
-        console.log(cardArr);
-    }
+
+var startCards = document.getElementById('cardBox');
+var newCard = document.createElement('div');
+
+startCards.append(newCard);
+
+var actCards = startCards.children;
+startCards.appendChild;
+console.log(startCards);
+
+console.log(actCards);
+console.log(actCards);
+console.log(actCards[3]);
+console.log(actCards[7]);
+console.log(actCards.length);
 
 
-    // for (var i = 0; i < setCards.length; i++) {
-    //     setCards.remove(setCards);
-}
+// for (var i = 0; i < setCards.length; i++) {
+//     setCards.remove(setCards);
+
 // console.log(setCards);
 
-console.log(setoutCards());
+// console.log(setoutCards());
 
 // for (var i = 0; i < cards; i++); {
 //     var cardBlank = (`<div id="${i}" class="${'c'+i}+carD col-xs-2 col-sm-2"><img class="imgD2" src="/assets/images/Card_Front.png" /></div>`);
