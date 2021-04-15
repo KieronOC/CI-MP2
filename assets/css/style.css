@@ -20,16 +20,44 @@
 
 /* Title */
 
-.title {
-    position: ;
-}
+
+/* User entry */
+
+
+/* Navigation to 3 games pages */
 
 
 /* Cards */
 
-.card {
-    background-color: blueviolet;
-    width: 20mm;
-    height: 45mm;
-    margin: 40px;
+.carD {
+    background-color: lightblue;
+    margin-left: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-right: 10px;
+    height: 200px;
+    min-width: 150px;
+    max-width: 150px;
+    padding: 2px;
+    border: 2px solid lightblue;
+}
+
+.imgD1 {
+    width: 100%;
+    height: 100%;
+    /* set to 'auto' in IE11 to avoid distortions */
+}
+
+.imgD2 {
+    width: 100%;
+    height: 100%;
+    /* set to 'auto' in IE11 to avoid distortions */
+}
+
+.c1 {
+    border-color: blue;
+}
+
+.test {
+    border-color: green;
 }

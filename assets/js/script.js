@@ -50,7 +50,7 @@ function shuffleArray() {
     return seQuence;
 }
 
-var positions = (shuffleArray('2,3,4,5,2,3,4,5,2,3'));
+var positions = (shuffleArray());
 console.log('These are the card position' + positions);
 console.log(positions);
 
