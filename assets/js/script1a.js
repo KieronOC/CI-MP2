@@ -1,14 +1,40 @@
 document.addEventListener("DOMContentLoaded", function() {});
 
-// Set all the backs of the cards to a variable
+// Start game by pressing start button
+var start = document.querySelector('#start');
 
-var imgF = "/assets/images/Card_Front.png"
-var img1 = "/assets/images/GP14.jpg"
-var img2 = "/assets/images/Nat12.jpg"
-var img3 = "/assets/images/Enterprise.jpg"
-var img4 = "/assets/images/Gull.jpg"
-var img5 = "/assets/images/Heron.jpg"
-var img6 = "/assets/images/solo.jpg"
+// Add event listener that shuffles cards base on their hidden images and starts a timer.
+
+// Displays the time
+var myVar = setInterval(function() {
+    var d = new Date();
+    var t = d.toLocaleTimeString();
+    var x = document.querySelector('#clock');
+    setTimeout(function() { x.innerHTML = 'Time now: ' + t });
+});
+
+
+
+
+
+// Timer code learnt from W3 Schools
+start.addEventListener('click', function() {
+    shuffleArray(cards);
+    var c = 0;
+    var t;
+
+    function timedCount() {
+        document.getElementById("stopwatch").innerHTML = c;
+        c = c + 1;
+        t = setTimeout(timedCount, 1000);
+    }
+    timedCount();
+
+});
+
+
+
+
 
 // Find out the screen size
 
@@ -26,8 +52,8 @@ var cards = document.getElementsByClassName('carD');
 console.log(cards[11].id);
 
 function addEVL() {
-    for (i = 0; i < cards.length; i++) {
-        cards[i].addEventListener('click', alt)
+    for (let i = 0; i < cards.length; i++) {
+        cards[i].addEventListener('click', alt);
     }
 }
 
@@ -46,50 +72,11 @@ function shuffleArray() {
         var temp = cards[i].outerHTML;
         cards[i].outerHTML = cards[j].outerHTML;
         cards[j].outerHTML = temp;
-    };
+    }
     return cards;
 }
-shuffleArray(cards);
+
 
 // cards[0].addEventListener('click', function() {
 //     alert(`this is my ${cards[0].id}`);
 // });
-
-
-
-
-
-function flip() {
-    for (i = 0; i < cards.length; i++); {
-        if (cards[i].id = 1 || 2) {
-            cards[i].firstChild.src = img1;
-            setTimeout(5000)
-            cards[i].firstChild.src = imgF
-        }
-        if (cards[i].id = 3 || 4) {
-            cards[i].firstChild.src = img2;
-            setTimeout(5000)
-            cards[i].firstChild.src = imgF
-        }
-        if (cards[i].id = 5 || 6) {
-            cards[i].firstChild.src = img3;
-            setTimeout(5000)
-            cards[i].firstChild.src = imgF
-        }
-        if (cards[i].id = 5 || 6) {
-            cards[i].firstChild.src = img4;
-            setTimeout(5000)
-            cards[i].firstChild.src = imgF
-        }
-        if (cards[i].id = 5 || 6) {
-            cards[i].firstChild.src = img5;
-            setTimeout(5000)
-            cards[i].firstChild.src = imgF
-        }
-        if (cards[i].id = 5 || 6) {
-            cards[i].firstChild.src = img6;
-            setTimeout(5000)
-            cards[i].firstChild.src = imgF
-        }
-    }
-}

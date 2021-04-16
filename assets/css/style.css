@@ -2,7 +2,7 @@
 
 #backImage {
     background-image: url("/assets/images/fastnet-people2.jpeg");
-    background-position: center;
+    background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -43,12 +43,7 @@
 }
 
 .imgD1 {
-    width: 100%;
-    height: 100%;
-    /* set to 'auto' in IE11 to avoid distortions */
-}
-
-.imgD2 {
+    background-position: center center;
     width: 100%;
     height: 100%;
     /* set to 'auto' in IE11 to avoid distortions */
