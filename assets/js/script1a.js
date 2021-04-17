@@ -95,8 +95,8 @@ function shuffleArray() {
 }
 
 for (var i = 0; i < cards.length; i++) {
-    cards[i].addEventListener('click', function(event) {
-        var idValue = event.id;
+    cards[i].addEventListener('click', function() {
+        var idValue = this.id;
         console.log(idValue);
         if (idValue === '1' || idValue === '2') {
             alert('hello' + idValue);
