@@ -36,7 +36,11 @@ var start = document.querySelector('#start');
 // Button to start timer and shuffle the cards on screen
 start.addEventListener('click', timedCount);
 start.addEventListener('click', shuffleArray);
-restart.addEventListener('click', refresh);
+
+
+// Gets the player to in effect refresh the page before pressing the Start button to start the timer and shuffle the cards
+var newGame = document.getElementById('reStart');
+newGame.addEventListener('click', refresh);
 
 function refresh() {
     window.location.reload();
