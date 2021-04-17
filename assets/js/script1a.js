@@ -66,7 +66,7 @@ function timedCount() {
 
 // Put all the cards into an array 
 
-var cards = document.getElementsByClassName('carD');
+var cards = document.querySelectorAll('.carD');
 
 // Find out the screen size
 
@@ -95,11 +95,13 @@ function shuffleArray() {
 }
 
 for (var i = 0; i < cards.length; i++) {
-    cards[i].addEventListener('click', function() {
-        if (cards[i].id === '1' || '2') {
-            alert('hello')
+    cards[i].addEventListener('click', function(event) {
+        var idValue = event.id;
+        console.log(idValue);
+        if (idValue === '1' || idValue === '2') {
+            alert('hello' + idValue);
         } else {
-            alert('not correct')
+            alert('not correct');
         };
     });
 }
