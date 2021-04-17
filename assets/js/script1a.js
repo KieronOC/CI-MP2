@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {});
 
+
+// An array of photos to use as background images
 var pictures = [
     { 'photo': 'GP14', 'img': '/assets/images/GP14.jpg', },
     { 'photo': 'GP14', 'img': '/assets/images/GP14.jpg', },
@@ -30,7 +32,34 @@ var pictures = [
 // Start game by pressing start button
 var start = document.querySelector('#start');
 
+// Create the card's HTML by looping through the array above
+
+var box = document.getElementById('cardBox');
+
+for (i = 0; i < pictures.length; i++) {
+
+    var cards = document.createElement('div');
+    // Add css for whole card (carD) plus 'photo' property from pictures to use for checking for a match later.
+    cards.classList.add('carD', `${pictures[i].photo}`);
+    // Unique Id for cards
+    cards.id = i;
+    box.appendChild(cards);
+
+
+    // Hidden cards face
+    var faceHidden = document.createElement('div')
+    faceHidden.classList.add('hidden');
+    cards.appendChild(faceHidden);
+
+    // Dinghy side of cards
+    var faceUp = document.createElement('div')
+    faceUp.classList.add('up');
+    cards.appendChild(faceUp);
+    faceUp.style.backgroundImage = `url(${pictures[i].img})`;
+}
+
 // Timer code learnt from W3 Schools and my own interpretation from there.
+// Button to start timer and shuffle the cards on screen
 start.addEventListener('click', timedCount);
 start.addEventListener('click', shuffleArray);
 
