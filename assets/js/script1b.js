@@ -35,33 +35,20 @@ var start = document.querySelector('#start');
 // Timer code learnt from W3 Schools and my own interpretation from there.
 // Button to start timer and shuffle the cards on screen
 start.addEventListener('click', timedCount);
-start.addEventListener('click', shuffleArray);
-restart.addEventListener('click', refresh);
+start.addEventListener('click', start);
 
-function refresh() {
-    window.location.reload();
-}
+// Create the card's HTML by looping through the array above
 
-// Add event listener that shuffles cards base on their hidden images and starts a timer.
+var box = document.getElementById('cardBox');
 
-// Durstenfeld shuffle from Stackoverflow at : https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array (5 Lines referenced below)
+function start() {
+    for (i = 0; i < pictures.length; i++) {
 
-
-// The following 5 lines, Based on Durstenfeld et al, converts the numbered list into a randomely shuffled list.
-
-function shuffleArray() {
-
-    for (var i = 0; i < pictures.length; i++) {
         var j = Math.floor(Math.random() * pictures.length);
         var temp = pictures[i];
         pictures[i] = pictures[j];
         pictures[j] = temp;
-    }
-    // Create the card's HTML by looping through the array above
 
-    var box = document.getElementById('cardBox');
-
-    for (i = 0; i < pictures.length; i++) {
 
         var cards = document.createElement('div');
         // Add css for whole card (carD) plus 'photo' property from pictures to use for checking for a match later.
@@ -82,15 +69,26 @@ function shuffleArray() {
         cards.appendChild(faceUp);
         faceUp.style.backgroundImage = `url(${pictures[i].img})`;
     }
-
-
 }
 
 
 
+// Add event listener that shuffles cards base on their hidden images and starts a timer.
+
+// Durstenfeld shuffle from Stackoverflow at : https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array (5 Lines referenced below)
 
 
-
+// The following 5 lines, Based on Durstenfeld et al, converts the numbered list into a randomely shuffled list.
+function shuffleArray() {
+    for (var i = 0; i < pictures.length; i++) {
+        var j = Math.floor(Math.random() * pictures.length);
+        var temp = pictures[i];
+        pictures[i] = pictures[j];
+        pictures[j] = temp;
+    }
+    console.log(pictures);
+    return pictures;
+}
 
 
 
