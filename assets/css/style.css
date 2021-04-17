@@ -40,19 +40,71 @@
     max-width: 150px;
     padding: 2px;
     border: 2px solid lightblue;
+    resize: both;
 }
+
+
+/* Extra small devices (phones, 600px and down) */
+
+@media only screen and (max-width: 700px) {
+    .carD {
+        margin-left: 3px;
+        margin-top: 3px;
+        margin-bottom: 3px;
+        margin-right: 3px;
+        height: 95px;
+        min-width: 50px;
+        max-width: 60px;
+    }
+}
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+
+@media only screen and (min-width: 600px) {}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+
+@media only screen and (min-width: 768px) {}
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+
+@media only screen and (min-width: 992px) {}
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+
+@media only screen and (min-width: 1200px) {}
 
 .imgD1 {
     background-position: center center;
     width: 100%;
     height: 100%;
-    /* set to 'auto' in IE11 to avoid distortions */
 }
 
-.c1 {
+
+/* set to 'auto' in IE11 to avoid distortions
+        
+        .c1 {
     border-color: blue;
 }
-
-.test {
-    border-color: green;
+.testClick {
+    background-image: url("/assets/images/Card_Front.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: contain;
+    width: 100%;
+    height: 200px;
+}
+#clock {
+    background-color: rgb(255, 255, 255, 0.5);
+    color: #741c69;
+    font-size: 20px;
+    text-align: center;
+    width: auto;
+    padding: 4px;
+    border-radius: 5px;
 }
