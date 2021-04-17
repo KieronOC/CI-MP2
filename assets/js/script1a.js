@@ -94,10 +94,16 @@ function shuffleArray() {
     return cards;
 }
 
-for (let card of cards) {
-    card.addEventListener('click', function() {
-        card.innerHTML = '<img class="imgD1" src="/assets/images/Card_Front.png" />';
-
-
+for (var i = 0; i < cards.length; i++) {
+    cards[i].addEventListener('click', function() {
+        if (cards[i].id === '1' || '2') {
+            alert('hello')
+        } else {
+            alert('not correct')
+        };
     });
 }
+
+
+
+// card.innerHTML = '<img class="imgD1" src="/assets/images/Card_Front.png" />';
