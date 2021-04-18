@@ -57,7 +57,17 @@ var start = document.querySelector('#start');
 // Timer code learnt from W3 Schools and my own interpretation from there.
 // Button to start timer and shuffle the cards on screen
 start.addEventListener('click', timedCount);
+
 start.addEventListener('click', shuffleArray);
+
+// start.addEventListener('click', function(event) {
+//     var hit = event.target;
+//     if (hit === previousTarget) {
+//         return;
+//     } else {
+//         shuffleArray();
+//     };
+// });
 start.addEventListener('click', play);
 
 var c = 00;
@@ -148,19 +158,18 @@ function shuffleArray() {
 function play() {
     var gameCards = document.getElementsByClassName('carD');
     for (let game of gameCards) {
-
+        var counter = 0
         game.addEventListener('click', function(event) {
-
             var choice = event.target;
-            choice.style.border = ('2px solid red')
-            if (choice === previousTarget) {
-                return;
+            if (choice) {
+                counter += 1;
+                if (counter > 2) {
+                    return
+                } else {
+                    choice.style.border = ('2px solid red')
+                }
             }
-
-
         })
-
-
     }
 }
 
