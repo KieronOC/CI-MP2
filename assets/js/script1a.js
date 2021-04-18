@@ -207,12 +207,13 @@ function play() {
                     choice.classList.remove('hidden');
                     // We now have two guesses recorded so we now need to collect the two elements with classes of 'guess' and check if the guess1 and guess2 variables are the same.
                 }
-
+                var bothCards = document.querySelectorAll('.guess');
+                console.log(bothCards);
                 if (guess1 !== '' && guess2 !== '') {
                     if (guess1 === guess2) {
                         setTimeout(() => {
-                            let bothGuesses = document.getElementsByClassName('guess');
-                            for (let stab of bothGuesses) {
+
+                            for (let i = 0; i < bothCards.length; i++) {
                                 stab.classList.remove('up')
                             }
                         }, delay);
@@ -221,24 +222,26 @@ function play() {
                             let guess2 = '';
                             let counter = 0;
                             let previousTarget = null;
-                            for (let stab of bothGuesses) {
-                                stab.classList.remove('up')
+                            for (let i = 0; i < bothCards.length; i++) {
+                                stab.classList.remove('guess')
                             }
                         }, delay);
                     } else {
                         setTimeout(() => {
+                            // let bothGuesses = document.getElementsByClassName('guess');
                             let guess1 = '';
                             let guess2 = '';
                             let counter = 0;
                             let previousTarget = null;
-                            for (let stab of bothGuesses) {
-                                stab.classList.remove('up')
+                            for (let i = 0; i < bothCards.length; i++) {
+                                bothCards[i].classList.add('hidden')
+                                bothCards[i].classList.remove('guess')
                             }
                         }, delay);
 
                     }
                 }
-                previousTarget = choice;
+                // previousTarget = choice;
             }
         })
     }
