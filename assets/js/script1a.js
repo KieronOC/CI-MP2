@@ -58,16 +58,20 @@ var start = document.querySelector('#start');
 // Button to start timer and shuffle the cards on screen
 start.addEventListener('click', timedCount);
 
-start.addEventListener('click', shuffleArray);
 
-// start.addEventListener('click', function(event) {
-//     var hit = event.target;
-//     if (hit === previousTarget) {
-//         return;
-//     } else {
-//         shuffleArray();
-//     };
-// });
+//  Starts the game by shuffling the deck and then adding the cards to the screen through f(shuffleArray), but stops more cards being added if Start button is pressed more than once.
+var hits = 0;
+start.addEventListener('click', function(event) {
+    hits += 1;
+    var hit = event.target;
+    if (hits > 1) {
+        return;
+    } else {
+        shuffleArray();
+    };
+});
+
+// Start the game itself of clicking and checking pairs of cards selected
 start.addEventListener('click', play);
 
 var c = 00;
@@ -109,15 +113,11 @@ function refresh() {
     window.location.reload();
 }
 
-// Add event listener that shuffles cards base on their hidden images and starts a timer.
 
-// Durstenfeld shuffle from Stackoverflow at : https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array (5 Lines referenced below)
-
-
-// The following 5 lines, Based on Durstenfeld et al, converts the numbered list into a randomely shuffled list.
+//Durstenfeld shuffle from Stackoverflow at : https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array.
 
 function shuffleArray() {
-
+    // The following 5 lines, Based on Durstenfeld et al, converts the numbered list into a randomely shuffled list.
     for (var i = 0; i < pictures.length; i++) {
         var j = Math.floor(Math.random() * pictures.length);
         var temp = pictures[i];
@@ -137,24 +137,22 @@ function shuffleArray() {
         cards.id = i;
         box.appendChild(cards);
 
-
-        // Hidden cards face
-        var faceHidden = document.createElement('div')
-        faceHidden.classList.add('hidden');
-        cards.appendChild(faceHidden);
-
         // Dinghy side of cards
         var faceUp = document.createElement('div')
         faceUp.classList.add('up');
         cards.appendChild(faceUp);
         faceUp.style.backgroundImage = `url(${pictures[i].img})`;
+
+        // Hidden cards face
+        var faceHidden = document.createElement('div')
+        faceHidden.classList.add('hidden');
+        cards.appendChild(faceHidden);
     }
-
     return;
-
 }
 
 
+// This section intended to power the selection of two cards, turn them over, check them for a match, turn them back if not matched and make them dissappear if they are.
 function play() {
     var gameCards = document.getElementsByClassName('carD');
     for (let game of gameCards) {
@@ -166,7 +164,8 @@ function play() {
                 if (counter > 2) {
                     return
                 } else {
-                    choice.style.border = ('2px solid red')
+                    choice.style.backgroundImage = `url(${pictures[i].img})`;
+
                 }
             }
         })

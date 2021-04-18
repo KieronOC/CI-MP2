@@ -36,11 +36,20 @@
     margin: 5px;
 }
 
-.up {
+
+/* z-index used to keep correct hidden face on top */
+
+.selection {
     z-index: 3;
+}
+
+.hidden {
+    z-index: 2;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-image: url('/assets/images/Card_Front.png');
+    background-color: lightblue;
     height: 200px;
     width: 150px;
     position: absolute;
@@ -48,13 +57,10 @@
     margin: 5px;
 }
 
-.hidden {
-    z-index: 4;
+.up {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url('/assets/images/Card_Front.png');
-    background-color: lightblue;
     height: 200px;
     width: 150px;
     position: absolute;
@@ -73,7 +79,7 @@
         margin: 5px;
     }
     .up {
-        z-index: 4;
+        z-index: 3;
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -84,7 +90,7 @@
         margin: 5px;
     }
     .hidden {
-        z-index: 3;
+        z-index: 4;
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
