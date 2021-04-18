@@ -165,6 +165,7 @@ function shuffleArray() {
 
 // This section intended to power the selection of two cards, turn them over, check them for a match, turn them back if not matched and make them dissappear if they are.
 
+// Set the variables required to zero
 let guess1 = '';
 let guess2 = '';
 let counter = 0;
@@ -172,24 +173,72 @@ let previousTarget = null;
 let delay = 2000;
 
 
+// This function accessed from event of pressing the start button
 function play() {
 
+    // Gets all the divs containing the 3 children divs that contain the pairs pictures, hidden face and a blank
     var gameCards = document.getElementsByClassName('carD');
 
+    // This then sets a for loop through the above array of divs
     for (let game of gameCards) {
+        // For every div an eventlistener is added reacting to a click
         game.addEventListener('click', function(event) {
+            // Each target clicked is added to a variable 
             var choice = event.target;
-
+            // We need to limit the choices to two cards for the pair game to work so we set a counter to zero above and make sure it does not exceed 2
             if (counter < 2) {
+                // The first card clicked brings us to this line where 1 is added to 0 = 1
                 counter += 1;
+                // The counter variable will exacly === 1 so this code will fire
                 if (counter === 1) {
+                    // We first get the name of the dinghy which was added as a class name from the shuffled array at line 141
                     guess1 = choice.parentNode.classList.item(1);
                     console.log(guess1);
+                    // We add a class to the clicked card to say this is a guess
+                    choice.classList.add('guess')
+                        // We remove the hidden class to show the dinghy picture behind
+                    choice.classList.remove('hidden');
+                    // At this point the programme will jump to the end of the play function and fire again at Line 185
+                } else {
+                    // The function will re enter the if statement at line 189 and add 1 to it at line 191 making it 2, so it will jump the condition at 193 and go straight to the else statement at 202 where the 2nd guess will be recorded in the same way as the first.
+                    guess2 = choice.parentNode.classList.item(1);
+                    console.log(guess2);
                     choice.classList.add('guess')
                     choice.classList.remove('hidden');
-                } else {
-
+                    // We now have two guesses recorded so we now need to collect the two elements with classes of 'guess' and check if the guess1 and guess2 variables are the same.
                 }
+
+                if (guess1 !== '' && guess2 !== '') {
+                    if (guess1 === guess2) {
+                        setTimeout(() => {
+                            let bothGuesses = document.getElementsByClassName('guess');
+                            for (let stab of bothGuesses) {
+                                stab.classList.remove('up')
+                            }
+                        }, delay);
+                        setTimeout(() => {
+                            let guess1 = '';
+                            let guess2 = '';
+                            let counter = 0;
+                            let previousTarget = null;
+                            for (let stab of bothGuesses) {
+                                stab.classList.remove('up')
+                            }
+                        }, delay);
+                    } else {
+                        setTimeout(() => {
+                            let guess1 = '';
+                            let guess2 = '';
+                            let counter = 0;
+                            let previousTarget = null;
+                            for (let stab of bothGuesses) {
+                                stab.classList.remove('up')
+                            }
+                        }, delay);
+
+                    }
+                }
+                previousTarget = choice;
             }
         })
     }
