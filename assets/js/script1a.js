@@ -1,3 +1,5 @@
+// ﻿python3 -m http.server
+
 document.addEventListener("DOMContentLoaded", function() {});
 // Displays the time : Learning source and come code from : https://www.codesdope.com/blog/article/how-to-create-a-digital-clock-using-javascript/
 
@@ -24,7 +26,7 @@ function currentTime() {
 currentTime();
 
 // An array of photos to use as background images
-var pictures = [
+let pictures = [
     { 'photo': 'GP14', 'img': '/assets/images/GP14.jpg', },
     { 'photo': 'GP14', 'img': '/assets/images/GP14.jpg', },
     { 'photo': 'Nat12', 'img': '/assets/images/Nat12.jpg', },
@@ -51,6 +53,8 @@ var pictures = [
     { 'photo': 'Bosun', 'img': '/assets/images/Bosun.jpg', },
 ]
 
+let mixedUpPics;
+
 // Start game by pressing start button
 var start = document.querySelector('#start');
 
@@ -61,9 +65,8 @@ start.addEventListener('click', timedCount);
 
 //  Starts the game by shuffling the deck and then adding the cards to the screen through f(shuffleArray), but stops more cards being added if Start button is pressed more than once.
 var hits = 0;
-start.addEventListener('click', function(event) {
+start.addEventListener('click', function() {
     hits += 1;
-    var hit = event.target;
     if (hits > 1) {
         return;
     } else {
@@ -124,15 +127,18 @@ function shuffleArray() {
         pictures[i] = pictures[j];
         pictures[j] = temp;
     }
+    mixedUpPics = pictures;
+    console.log(mixedUpPics);
+
     // Create the card's HTML by looping through the array above
 
     var box = document.getElementById('cardBox');
 
-    for (i = 0; i < pictures.length; i++) {
+    for (i = 0; i < mixedUpPics.length; i++) {
 
         var cards = document.createElement('div');
         // Add css for whole card (carD) plus 'photo' property from pictures to use for checking for a match later.
-        cards.classList.add('carD', `${pictures[i].photo}`);
+        cards.classList.add('carD', `${mixedUpPics[i].photo}`);
         // Unique Id for cards
         cards.id = i;
         box.appendChild(cards);
@@ -141,11 +147,16 @@ function shuffleArray() {
         var faceUp = document.createElement('div')
         faceUp.classList.add('up');
         cards.appendChild(faceUp);
-        faceUp.style.backgroundImage = `url(${pictures[i].img})`;
+        faceUp.style.backgroundImage = `url(${mixedUpPics[i].img})`;
 
         // Hidden cards face
         var faceHidden = document.createElement('div')
         faceHidden.classList.add('hidden');
+        cards.appendChild(faceHidden);
+
+        // Blank card for when cards matched to create blank space
+        var faceHidden = document.createElement('div')
+        faceHidden.classList.add('blank');
         cards.appendChild(faceHidden);
     }
     return;
@@ -153,23 +164,36 @@ function shuffleArray() {
 
 
 // This section intended to power the selection of two cards, turn them over, check them for a match, turn them back if not matched and make them dissappear if they are.
+
+let guess1 = '';
+let guess2 = '';
+let counter = 0;
+let previousTarget = null;
+let delay = 2000;
+
+
 function play() {
+
     var gameCards = document.getElementsByClassName('carD');
+
     for (let game of gameCards) {
-        var counter = 0
         game.addEventListener('click', function(event) {
             var choice = event.target;
-            if (choice) {
+
+            if (counter < 2) {
                 counter += 1;
-                if (counter > 2) {
-                    return
+                if (counter === 1) {
+                    guess1 = choice.parentNode.classList.item(1);
+                    console.log(guess1);
+                    choice.classList.add('guess')
+                    choice.classList.remove('hidden');
                 } else {
-                    choice.style.backgroundImage = `url(${pictures[i].img})`;
 
                 }
             }
         })
     }
+
 }
 
 
