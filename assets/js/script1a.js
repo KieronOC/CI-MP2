@@ -75,7 +75,7 @@ start.addEventListener('click', function() {
 });
 
 // Start the game itself of clicking and checking pairs of cards selected
-start.addEventListener('click', play);
+// start.addEventListener('click', play);
 
 var c = 00;
 var t;
@@ -116,7 +116,7 @@ function refresh() {
     window.location.reload();
 }
 
-
+let box = document.getElementById('cardBox');
 //Durstenfeld shuffle from Stackoverflow at : https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array.
 
 function shuffleArray() {
@@ -132,7 +132,7 @@ function shuffleArray() {
 
     // Create the card's HTML by looping through the array above
 
-    var box = document.getElementById('cardBox');
+    // var box = document.getElementById('cardBox');
 
     for (i = 0; i < mixedUpPics.length; i++) {
 
@@ -173,81 +173,87 @@ let previousTarget = null;
 let delay = 2000;
 
 
+
+
+// Gets all the divs containing the 3 children divs that contain the pairs pictures, hidden face and a blank
+// var gameCards = document.getElementsByClassName('carD');
+// console.log(gameCards);
 // This function accessed from event of pressing the start button
-function play() {
+// function play() {
 
-    // Gets all the divs containing the 3 children divs that contain the pairs pictures, hidden face and a blank
-    var gameCards = document.getElementsByClassName('carD');
+// This then sets a for loop through the above array of divs
+// for (let i = 0; i < gameCards.length; i++) {
+// For every div an eventlistener is added reacting to a click
+var choice;
 
-    // This then sets a for loop through the above array of divs
-    for (let game of gameCards) {
-        // For every div an eventlistener is added reacting to a click
-        game.addEventListener('click', function(event) {
-            // Each target clicked is added to a variable 
-            var choice = event.target;
-            // We need to limit the choices to two cards for the pair game to work so we set a counter to zero above and make sure it does not exceed 2
-            if (counter < 2) {
-                // The first card clicked brings us to this line where 1 is added to 0 = 1
-                counter += 1;
-                // The counter variable will exacly === 1 so this code will fire
-                if (counter === 1) {
-                    // We first get the name of the dinghy which was added as a class name from the shuffled array at line 141
-                    guess1 = choice.parentNode.classList.item(1);
-                    console.log(guess1);
-                    // We add a class to the clicked card to say this is a guess
-                    choice.classList.add('guess')
-                        // We remove the hidden class to show the dinghy picture behind
-                    choice.classList.remove('hidden');
-                    // At this point the programme will jump to the end of the play function and fire again at Line 185
-                } else {
-                    // The function will re enter the if statement at line 189 and add 1 to it at line 191 making it 2, so it will jump the condition at 193 and go straight to the else statement at 202 where the 2nd guess will be recorded in the same way as the first.
-                    guess2 = choice.parentNode.classList.item(1);
-                    console.log(guess2);
-                    choice.classList.add('guess')
-                    choice.classList.remove('hidden');
-                    // We now have two guesses recorded so we now need to collect the two elements with classes of 'guess' and check if the guess1 and guess2 variables are the same.
-                }
-                var bothCards = document.querySelectorAll('.guess');
-                console.log(bothCards);
-                if (guess1 !== '' && guess2 !== '') {
-                    if (guess1 === guess2) {
-                        setTimeout(() => {
+box.addEventListener('click', function(event) {
 
-                            for (let i = 0; i < bothCards.length; i++) {
-                                stab.classList.remove('up')
-                            }
-                        }, delay);
-                        setTimeout(() => {
-                            let guess1 = '';
-                            let guess2 = '';
-                            let counter = 0;
-                            let previousTarget = null;
-                            for (let i = 0; i < bothCards.length; i++) {
-                                stab.classList.remove('guess')
-                            }
-                        }, delay);
-                    } else {
-                        setTimeout(() => {
-                            // let bothGuesses = document.getElementsByClassName('guess');
-                            let guess1 = '';
-                            let guess2 = '';
-                            let counter = 0;
-                            let previousTarget = null;
-                            for (let i = 0; i < bothCards.length; i++) {
-                                bothCards[i].classList.add('hidden')
-                                bothCards[i].classList.remove('guess')
-                            }
-                        }, delay);
 
-                    }
-                }
-                // previousTarget = choice;
-            }
-        })
+    // Each target clicked is added to a variable 
+    choice = event.target;
+
+    if (choice.id === 'cardBox' || choice.nextSibling.className === 'guess') {
+        return;
     }
+    // We need to limit the choices to two cards for the pair game to work so we set a counter to zero above and make sure it does not exceed 2
+    if (counter < 2) {
+        // The first card clicked brings us to this line where 1 is added to 0 = 1
+        counter += 1;
+        // The counter variable will exacly === 1 so this code will fire
+        if (counter === 1) {
+            // We first get the name of the dinghy which was added as a class name from the shuffled array at line 141
+            guess1 = choice.parentNode.classList.item(1);
+            console.log(guess1);
+            // We add a class to the clicked card to say this is a guess
+            choice.classList.add('guess')
+                // We remove the hidden class to show the dinghy picture behind
+            choice.classList.remove('hidden');
+            // At this point the programme will jump to the end of the play function and fire again at Line 185
 
-}
+        } else {
+            // The function will re enter the if statement at line 189 and add 1 to it at line 191 making it 2, so it will jump the condition at 193 and go straight to the else statement at 202 where the 2nd guess will be recorded in the same way as the first.
+            guess2 = choice.parentNode.classList.item(1);
+            console.log(guess2);
+            choice.classList.add('guess')
+            choice.classList.remove('hidden');
+            // We now have two guesses recorded so we now need to collect the two elements with classes of 'guess' and check if the guess1 and guess2 variables are the same.
+        }
+        var bothCards = document.querySelectorAll('.guess');
+        console.log(bothCards);
+        if (guess1 !== '' && guess2 !== '') {
+            if (guess1 === guess2) {
+                setTimeout(function() {
 
+                    for (let i = 0; i < bothCards.length; i++) {
+                        bothCards[i].previousSibling.classList.remove('up')
+                    }
+                }, delay);
+                setTimeout(function() {
+                    guess1 = '';
+                    guess2 = '';
+                    counter = 0;
+                    previousTarget = null;
+                    for (let i = 0; i < bothCards.length; i++) {
+                        bothCards[i].classList.remove('guess')
+                    }
+                }, delay);
+
+            } else {
+                setTimeout(function() {
+                    // let bothGuesses = document.getElementsByClassName('guess');
+                    guess1 = '';
+                    guess2 = '';
+                    counter = 0;
+                    previousTarget = null;
+                    for (let i = 0; i < bothCards.length; i++) {
+                        bothCards[i].classList.add('hidden')
+                        bothCards[i].classList.remove('guess')
+                    }
+                }, delay);
+            }
+        }
+    }
+});
 
 
 
