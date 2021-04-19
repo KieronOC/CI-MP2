@@ -20,7 +20,7 @@ function currentTime() {
             return k;
         }
     }
-    document.getElementById("clock").innerHTML = 'Current Time is : ' + hour + " : " + min + " : " + sec;
+    document.getElementById("clock").innerText = 'Time now : ' + hour + " : " + min + " : " + sec;
     var t = setTimeout(function() { currentTime() }, 1000);
 }
 currentTime();
@@ -77,7 +77,7 @@ start.addEventListener('click', function() {
 // Start the game itself of clicking and checking pairs of cards selected
 // start.addEventListener('click', play);
 
-var c = 00;
+var c = 0;
 var t;
 var timer = document.getElementById("stopwatch");
 
@@ -112,7 +112,7 @@ let delayMc = 20;
 let delayMiss = 3000;
 
 // Gets the player to in effect refresh the page before pressing the Start button to start the timer and shuffle the cards
-var newGame = document.getElementById('slow');
+var newGame = document.getElementById('reStart');
 newGame.addEventListener('click', refresh);
 
 function refresh() {
@@ -132,6 +132,14 @@ function shuffleArray() {
     }
     mixedUpPics = pictures;
     console.log(mixedUpPics);
+
+    // Remove Jumbotron
+
+    var jumBo = document.getElementById('gameInfo');
+    jumBo.remove();
+
+
+
 
     // Create the card's HTML by looping through the array above
 
@@ -155,7 +163,7 @@ function shuffleArray() {
         text.classList.add('boatName');
         text.innerText = `${mixedUpPics[i].photo}`;
         faceUp.appendChild(text);
-        // faceUp.innerText = mixedUpPics[i].photo
+
 
         // Hidden cards face
         var faceHidden = document.createElement('div')
@@ -240,7 +248,6 @@ box.addEventListener('click', function(event) {
             if (guess1 === guess2) {
                 setTimeout(function() {
                     for (let i = 0; i < bothCards.length; i++) {
-                        // bothCards[i].previousSibling.style.innerText = '';
                         bothCards[i].previousSibling.classList.remove('up');
                         bothCards[i].previousSibling.firstChild.innerText = '';
 
