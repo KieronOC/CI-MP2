@@ -39,10 +39,6 @@
 
 /* z-index used to keep correct hidden face on top */
 
-.selection {
-    z-index: 3;
-}
-
 .hidden {
     z-index: 2;
     background-position: center center;
@@ -58,6 +54,7 @@
 }
 
 .up {
+    /* z-index: 3; */
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -66,6 +63,11 @@
     position: absolute;
     /* backface-visibility: hidden; */
     margin: 5px;
+    color: rgba(46, 43, 54, 0.808);
+    font-variant-caps: all-petite-caps;
+    font-weight: 900;
+    font-display: block;
+    padding-left: 5px;
 }
 
 

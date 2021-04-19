@@ -31,45 +31,50 @@
 <!-- Main body of website that will be seen -->
 
 <body id="backImage" class="mx-auto">
-    <main>
-        <section id="fade">
+    <!-- <main> -->
+    <section id="fade">
+        <div class="container-fluid">
+            <div class="d-flex justify-content-between">
+                <div id="clock"></div>
+                <div class="title row">A simple memory game to help teach kids about sailing
+                </div>
+                <div class="title row">SAILING PAIRS</div>
+            </div>
+            <div class="d-flex justify-content-center">
+
+            </div>
             <div class="container-fluid">
+                <div class="d-flex justify-content-between">
+                    <div class="buttons">
+                        <button id="slow" class="speed">Slow</button><span>Press to reset the game</span>
+                        <button id="medium" class="speed">Medium</button><span>Press to reset the game</span>
+                        <button id="quick" class="speed">Quick</button><span>Press to reset the game</span>
+                    </div>
+                    <div>
+                        <div id="stopwatch">Timer</div>
+                    </div>
+                </div>
                 <div class="d-flex justify-content-center">
-                    <div class="title row">Sailing Learning Game
+                    <div class="buttons">
+                        <button id="start">Starting Gun</button>
+                        <div>When you are ready press the Starting Gun above and the timer will start</div>
+                        <div>HAVE FUN</div>
                     </div>
-                </div>
-                <div class="container-fluid">
-                    <div class="d-flex justify-content-between">
-                        <div>
-                            <div id="clock"></div>
 
-                        </div>
-                        <div class="buttons">
-                            <button id="start">Start Button</button>
-
-                        </div>
-                        <div class="buttons">
-                            <button id="reStart">New Game</button>
-
-                        </div>
-                        <div>
-                            <div id="stopwatch">Timer</div>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="area col container-fluid justify-content-between">
-                    <div id="cardBox" class="cardBox row d-flex justify-content-center"></div>
-                </div>
-                <div class="container-fluid">
-                    <div class="row"></div>
                 </div>
             </div>
+            <div class="area col container-fluid justify-content-between" style="margin-top: 20px" ;>
+                <div id="cardBox" class="cardBox row d-flex justify-content-center"></div>
+            </div>
+            <div class="container-fluid">
+                <div class="row"></div>
+            </div>
+        </div>
 
-        </section>
+    </section>
 
 
-    </main>
+    <!-- </main> -->
 
 
 

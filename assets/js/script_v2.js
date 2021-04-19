@@ -29,20 +29,20 @@ currentTime();
 let pictures = [
     { 'photo': 'GP14', 'img': '/assets/images/GP14.jpg', },
     { 'photo': 'GP14', 'img': '/assets/images/GP14.jpg', },
-    { 'photo': 'National12', 'img': '/assets/images/Nat12.jpg', },
-    { 'photo': 'National12', 'img': '/assets/images/Nat12.jpg', },
+    { 'photo': 'Nat12', 'img': '/assets/images/Nat12.jpg', },
+    { 'photo': 'Nat12', 'img': '/assets/images/Nat12.jpg', },
     { 'photo': 'Enterprise', 'img': '/assets/images/Enterprise.jpg', },
     { 'photo': 'Enterprise', 'img': '/assets/images/Enterprise.jpg', },
     { 'photo': 'Gull', 'img': '/assets/images/Gull.jpeg', },
     { 'photo': 'Gull', 'img': '/assets/images/Gull.jpeg', },
     { 'photo': 'Heron', 'img': '/assets/images/Heron.jpg', },
     { 'photo': 'Heron', 'img': '/assets/images/Heron.jpg', },
-    { 'photo': 'Solo', 'img': '/assets/images/solo.jpg', },
-    { 'photo': 'Solo', 'img': '/assets/images/solo.jpg', },
-    { 'photo': 'Fireball', 'img': '/assets/images/fireball.jpg', },
-    { 'photo': 'Fireball', 'img': '/assets/images/fireball.jpg', },
-    { 'photo': 'Intl14', 'img': '/assets/images/Int14.jpg', },
-    { 'photo': 'Intl14', 'img': '/assets/images/Int14.jpg', },
+    { 'photo': 'solo', 'img': '/assets/images/solo.jpg', },
+    { 'photo': 'solo', 'img': '/assets/images/solo.jpg', },
+    { 'photo': 'fireball', 'img': '/assets/images/fireball.jpg', },
+    { 'photo': 'fireball', 'img': '/assets/images/fireball.jpg', },
+    { 'photo': 'Int14', 'img': '/assets/images/Int14.jpg', },
+    { 'photo': 'Int14', 'img': '/assets/images/Int14.jpg', },
     { 'photo': 'Scorpian', 'img': '/assets/images/Scorpian.jpg', },
     { 'photo': 'Scorpian', 'img': '/assets/images/Scorpian.jpg', },
     { 'photo': 'Merlin_Rocket', 'img': '/assets/images/Merlin_Rocket.jpg', },
@@ -107,12 +107,9 @@ function timedCount() {
     t = setTimeout(timedCount, 1000);
 }
 
-let delayM = 400;
-let delayMc = 20;
-let delayMiss = 3000;
 
 // Gets the player to in effect refresh the page before pressing the Start button to start the timer and shuffle the cards
-var newGame = document.getElementById('slow');
+var newGame = document.getElementById('reStart');
 newGame.addEventListener('click', refresh);
 
 function refresh() {
@@ -147,15 +144,10 @@ function shuffleArray() {
         box.appendChild(cards);
 
         // Dinghy side of cards
-        var faceUp = document.createElement('div');
+        var faceUp = document.createElement('div')
         faceUp.classList.add('up');
         cards.appendChild(faceUp);
         faceUp.style.backgroundImage = `url(${mixedUpPics[i].img})`;
-        var text = document.createElement('span');
-        text.classList.add('boatName');
-        text.innerText = `${mixedUpPics[i].photo}`;
-        faceUp.appendChild(text);
-        // faceUp.innerText = mixedUpPics[i].photo
 
         // Hidden cards face
         var faceHidden = document.createElement('div')
@@ -178,6 +170,7 @@ let guess1 = '';
 let guess2 = '';
 let counter = 0;
 let previousTarget = null;
+let delay = 3000;
 
 
 
@@ -192,18 +185,16 @@ let previousTarget = null;
 // for (let i = 0; i < gameCards.length; i++) {
 // For every div an eventlistener is added reacting to a click
 var choice;
-var correct = 0;
+
 box.addEventListener('click', function(event) {
 
 
     // Each target clicked is added to a variable 
     choice = event.target;
 
-    if (choice.id === 'cardBox' || choice.nextSibling.className === 'guess' || choice.classList.item(0) === 'carD') {
+    if (choice.id === 'cardBox' || choice.nextSibling.className === 'guess') {
         return;
     }
-
-
     // We need to limit the choices to two cards for the pair game to work so we set a counter to zero above and make sure it does not exceed 2
     if (counter < 2) {
         // The first card clicked brings us to this line where 1 is added to 0 = 1
@@ -212,10 +203,6 @@ box.addEventListener('click', function(event) {
         if (counter === 1) {
             // We first get the name of the dinghy which was added as a class name from the shuffled array at line 141
             guess1 = choice.parentNode.classList.item(1);
-            // if (choice.classList.item(0) === 'carD') {
-            //     return;
-            // }
-
             console.log(guess1);
             // We add a class to the clicked card to say this is a guess
             choice.classList.add('guess')
@@ -226,9 +213,6 @@ box.addEventListener('click', function(event) {
         } else {
             // The function will re enter the if statement at line 189 and add 1 to it at line 191 making it 2, so it will jump the condition at 193 and go straight to the else statement at 202 where the 2nd guess will be recorded in the same way as the first.
             guess2 = choice.parentNode.classList.item(1);
-            // if (choice.classList.item(0) === 'carD') {
-            //     return;
-            // }
             console.log(guess2);
             choice.classList.add('guess')
             choice.classList.remove('hidden');
@@ -236,23 +220,14 @@ box.addEventListener('click', function(event) {
         }
         var bothCards = document.querySelectorAll('.guess');
         console.log(bothCards);
+
         if (guess1 !== '' && guess2 !== '') {
             if (guess1 === guess2) {
                 setTimeout(function() {
                     for (let i = 0; i < bothCards.length; i++) {
-                        // bothCards[i].previousSibling.style.innerText = '';
-                        bothCards[i].previousSibling.classList.remove('up');
-                        bothCards[i].previousSibling.firstChild.innerText = '';
-
+                        bothCards[i].previousSibling.classList.remove('up')
                     }
-                    correct += 1;
-                    if (correct === 12) {
-                        clearTimeout(t);
-                        return wellDone();
-                    } else {
-
-                    };
-                }, delayM);
+                }, delay);
                 setTimeout(function() {
                     guess1 = '';
                     guess2 = '';
@@ -261,10 +236,29 @@ box.addEventListener('click', function(event) {
                     for (let i = 0; i < bothCards.length; i++) {
                         bothCards[i].classList.remove('guess')
                     }
-                }, delayM);
+                }, delay);
 
+            } else if (onkeydown) {
+
+
+
+                // bothCards[0].previousSibling.addEventListener('dblclick', kieron);
+                // bothCards[1].previousSibling.addEventListener('dblclick', kieron);
+
+
+                guess1 = '';
+                guess2 = '';
+                counter = 0;
+                previousTarget = null;
+                for (let j = 0; j < bothCards.length; j++) {
+                    bothCards[j].classList.add('hidden')
+                    bothCards[j].classList.remove('guess')
+                }
+                return
             } else {
+
                 setTimeout(function() {
+
                     guess1 = '';
                     guess2 = '';
                     counter = 0;
@@ -273,21 +267,10 @@ box.addEventListener('click', function(event) {
                         bothCards[i].classList.add('hidden')
                         bothCards[i].classList.remove('guess')
                     }
-                }, delayMiss);
+                }, delay);
             }
+
         }
     }
+
 });
-
-function wellDone() {
-
-    var clearDeck = document.getElementById('cardBox');
-    clearDeck.innerHTML = '';
-    var message = document.createElement('div')
-    clearDeck.appendChild(message);
-    message.classList.add('message');
-    message.innerText = 'WELL DONE, Great Sailing. Press Slow, Medium or Quick butons, then press the Starting Gun to have another go.' + 'Your time was' + `${Math.floor(c/60)}+' Min : ' + ${c%60} +' Secs.'`;
-    message.style.fontSize = '50px';
-
-
-}
