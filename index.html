@@ -32,71 +32,65 @@
 <!-- Main body of website that will be seen -->
 
 <body id="backImage" class="mx-auto">
-    <!-- <main> -->
-    <section id="fade">
+    <section id="fade" class=" justify-content-center">
+
         <div class="container-fluid">
             <div class="row d-flex justify-content-start">
-                <div id="clock" class="col-lg-3 col-sm-3 "></div>
-            </div>
-            <div class="row accordion justify-content-center">
-                <div class="title col-lg-3 col-sm-3">SAILING PAIRS</div>
-            </div>
-            <div class="row d-flex justify-content-between">
-                <div class="row"> <button id="reStart" class="speed">New Game</button></div>
-                <div class="row" id="stopwatch">Timer</div>
-            </div>
-        </div>
-
-        <div class="container-fluid">
-            <div id="gameInfo" class="d-flex jumbotron container-fluid">
-                <div class="col">
-                    <div class="row d-flex justify-content-end">
-                        <div class="col">
-                            A simple memory game to help teach kids about sailing
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col d-flex justify-content-end">
-                            <div class="col">
-                                When you are ready press the Starting Gun below and the timer will start
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col d-flex justify-content-end">
-                            <button id="slow" class="speed">Slow</button>
-                            <button id="medium" class="speed">Medium</button>
-                            <button id="quick" class="speed">Quick</button>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col d-flex justify-content-end">
-                            <div>HAVE FUN</div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col d-flex justify-content-end">
-                            <button id="start" class="button">Starting Gun</button></div>
-                    </div>
-
+                <div class="col-sm-12">
+                    <div id="clock" class="dClock"></div>
                 </div>
             </div>
+            <div class="row accordion justify-content-center">
+                <div class="title col-sm-12">SAILING PAIRS</div>
+            </div>
+            <div class="r3 row d-flex justify-content-between">
+                <div class="col-2"> <button id="reStart" class="speed">New Game</button></div>
+                <div class="col-2" id="stopwatch">Timer</div>
+            </div>
+        </div>
 
-
-        </div>
-        </div>
-        <div class="area col container-fluid justify-content-between" style="margin-top: 20px" ;>
-            <div id="cardBox" class="cardBox row d-flex justify-content-center"></div>
-        </div>
         <div class="container-fluid">
-            <div class="row"></div>
-        </div>
+            <div id="gameInfo" class="jumbotron justify-content-center">
+                <div class="row d-flex justify-content-end">
+                    <div class="col">
+                        A simple memory game to help teach kids about sailing
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col d-flex">
+                        When you are ready press the Starting Gun below and the timer will start
+                    </div>
+                </div>
+                <div class="row d-flex justify-content-end">
+                    <div class="col ">
+                        <button id="slow" class="speed">Slow</button>
+                        <button id="medium" class="speed">Medium</button>
+                        <button id="quick" class="speed">Quick</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col d-flex justify-content-end">
+                        HAVE FUN
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col d-flex justify-content-end">
+                        <button id="start" class="button">Starting Gun</button></div>
+                </div>
+            </div>
         </div>
 
+
+        <footer>
+            <div class="area container-fluid">
+                <div id="cardBox" class="cardBox row d-flex justify-content-center"></div>
+            </div>
+
+            <div class="container-fluid">
+                <div class="row"></div>
+            </div>
+        </footer>
     </section>
-
-
-    <!-- </main> -->
 
 
 
