@@ -64,7 +64,7 @@ let pictures = [
 
 let delayM = 400;
 let delayMc = 20;
-let delayMiss = 6000;
+let delayMiss = 2000;
 
 var sLow = document.getElementById('slow');
 var mEdium = document.getElementById('medium');
@@ -75,11 +75,11 @@ sLow.addEventListener('click', function() {
     qUick.classList = '';
     if (sLow.classList.contains('speedPick')) {
         sLow.classList.remove('speedPick');
-        delayMiss = 6000;
+        delayMiss = 2000;
         return
     } else {
         sLow.classList.add('speedPick')
-        delayMiss = 6000;
+        delayMiss = 2000;
         return
     }
 });
@@ -89,11 +89,11 @@ mEdium.addEventListener('click', function() {
     qUick.classList = '';
     if (mEdium.classList.contains('speedPick')) {
         mEdium.classList.remove('speedPick');
-        delayMiss = 6000;
+        delayMiss = 2000;
         return
     } else {
         mEdium.classList.add('speedPick')
-        delayMiss = 3000;
+        delayMiss = 1000;
         return
     }
 });
@@ -103,11 +103,11 @@ qUick.addEventListener('click', function() {
     sLow.classList = '';
     if (qUick.classList.contains('speedPick')) {
         qUick.classList.remove('speedPick');
-        delayMiss = 6000;
+        delayMiss = 2000;
         return
     } else {
         qUick.classList.add('speedPick')
-        delayMiss = 1000;
+        delayMiss = 500;
         return
     }
 });
@@ -219,7 +219,7 @@ function shuffleArray() {
 
         var cards = document.createElement('div');
         // Add css for whole card (carD) plus 'photo' property from pictures to use for checking for a match later.
-        cards.classList.add('carD', 'col-md-2', `${mixedUpPics[i].photo}`);
+        cards.classList.add('carD', `${mixedUpPics[i].photo}`);
         // Unique Id for cards
         cards.id = i;
         box.appendChild(cards);

@@ -27,12 +27,16 @@ body {
 
 /* Title */
 
+.title,
+.dClock {
+    padding: 4px;
+}
+
 .title {
     color: #ee6ffa;
     font-size: 2.2rem;
     text-align: center;
     width: fit-content;
-    padding: 2px 10px 2px 10px;
     border-radius: 5px;
 }
 
@@ -42,42 +46,39 @@ body {
     font-size: 90%;
     text-align: center;
     width: 300px;
-    padding: 4px;
     border-radius: 5px;
 }
 
 .r3 {
-    margin: 5px 5px 20px 0px;
+    margin: 1px 1px 1px 1px;
 }
 
 .c1 {
     padding-left: 0;
 }
 
+#reStart,
+#stopwatch {
+    font-size: 1em;
+    text-align: center;
+    border-radius: 5px;
+    margin: 5px 5px 5px 5px;
+    padding: 5px 10px 5px 10px;
+}
+
 #reStart {
     color: #f3f3f7;
-    font-size: large;
-    margin-top: 40px;
     width: auto;
-    /* height: 75px; */
     /* Adapted from W3 schools */
     background-image: linear-gradient(to top right, rgb(0, 255, 85), rgb(0, 130, 91), rgb(130, 180, 238));
     box-shadow: 5px 5px 5px rgb(41, 36, 36);
-    margin: 5px 5px 5px 5px;
-    border-radius: 4px;
-    padding: 5px 10px 5px 10px;
 }
 
 #stopwatch {
     background-image: linear-gradient(to bottom right, rgb(225, 0, 255), rgb(237, 240, 245), rgb(189, 130, 238));
     color: #1d0d1b;
-    font-size: 1em;
-    text-align: center;
     max-width: 200px;
     height: fit-content;
-    height: fit-content;
-    border-radius: 5px;
-    padding: 10px 15px 5px 15px;
 }
 
 
@@ -175,19 +176,37 @@ button {
 
 /* Cards */
 
+.area {
+    margin-bottom: 10px;
+}
+
+.area2 {
+    padding: 0px 0px 0px 0px;
+}
+
 .cardBox {
-    margin: 0px 20px 0px 20px;
+    margin: 0px 5px 0px 5px;
 }
 
 .carD {
     position: relative;
     height: 200px;
+    width: fit-content;
     width: 150px;
-    margin: 5px 10px 5px 10px;
+    margin: 2px;
+    padding: 2px;
 }
 
 
 /* z-index used to keep correct hidden face on top */
+
+.hidden,
+.up {
+    height: 200px;
+    width: 150px;
+    margin: 2px;
+    padding: 2px;
+}
 
 .hidden {
     z-index: 2;
@@ -197,10 +216,7 @@ button {
     /* Free image from https://www.netclipart.com/isee/ooTmi_sailboat-children-playing-kid-girl-sailing-sea-sailing/. OK for private non commericial use.*/
     background-image: url('/assets/images/Card_Front.png');
     background-color: #81b2d1;
-    height: 200px;
-    width: 150px;
     position: absolute;
-    margin: 5px;
 }
 
 .up {
@@ -208,57 +224,37 @@ button {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 200px;
-    width: 150px;
     position: absolute;
-    margin: 5px;
     color: rgba(46, 43, 54, 0.808);
     font-variant-caps: all-petite-caps;
     font-weight: 900;
     font-display: block;
-    padding-left: 5px;
 }
 
 
 /* Extra small devices (phones, 600px and down) */
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 750px) {
     .title {
-        font-size: 0.8rem;
+        font-size: 0.9rem;
+    }
+    #reStart,
+    #stopwatch {
+        font-size: 0.5em;
+        text-align: center;
+        border-radius: 5px;
+        margin: 5px 5px 5px 5px;
+        padding: 5px 10px 5px 10px;
+    }
+    .carD,
+    .up,
+    .hidden {
+        height: 73px;
+        width: 55px;
     }
     .carD {
         position: relative;
-        height: 100px;
-        width: 60px;
         margin: 5px;
-    }
-    .up {
-        /* z-index: 3; */
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 100px;
-        width: 80px;
-        position: absolute;
-        margin: 15px;
-        color: rgba(46, 43, 54, 0.808);
-        font-variant-caps: all-petite-caps;
-        font-weight: 900;
-        /* font-display: block; */
-        /* padding-left: 5px; */
-        font-size: xx-small;
-    }
-    .hidden {
-        z-index: 4;
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-image: url('/assets/images/Card_Front.png');
-        background-color: lightblue;
-        height: 100px;
-        width: 80px;
-        position: absolute;
-        margin: 15px;
     }
 }
 
