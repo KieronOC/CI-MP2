@@ -13,7 +13,7 @@ body {
 
 #backImage {
     /* Personal photo with no copyright issues for personal non commercial use */
-    background-image: url("/assets/images/fastnet-people2.jpeg");
+    background-image: url('/assets/images/fastnet-people2.jpeg');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
