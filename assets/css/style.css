@@ -1,14 +1,14 @@
 /* Background Image */
 
 html {
-    margin: 0px 20px 0px 20px;
+    margin: 0px 10px 0px 10px;
 }
 
 body {
     font-family: 'Original Surfer', cursive;
     font-size: 20px;
     min-height: 100vh;
-    max-width: 99%;
+    max-width: 99.5%;
 }
 
 #backImage {
@@ -29,24 +29,24 @@ body {
 
 .title,
 .dClock {
-    padding: 4px;
+    padding: 5px;
 }
 
 .title {
     color: #ee6ffa;
-    font-size: 2.2rem;
-    text-align: center;
+    text-align: left;
     width: fit-content;
     border-radius: 5px;
+    font-size: 1.5rem;
 }
 
 .dClock {
     /* background-color: #1c7ab585; */
     color: #d0d3fa;
-    font-size: 90%;
-    text-align: center;
+    text-align: right;
     width: 300px;
     border-radius: 5px;
+    font-size: 1.2rem;
 }
 
 .r3 {
@@ -234,9 +234,12 @@ button {
 
 /* Extra small devices (phones, 600px and down) */
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 850px) {
     .title {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
+    }
+    .dClock {
+        font-size: 0.8rem;
     }
     #reStart,
     #stopwatch {
@@ -256,13 +259,128 @@ button {
         position: relative;
         margin: 5px;
     }
+    .boatName {
+        font-size: 0.35em;
+        background-color: #d0d3fa;
+        padding-left: 2px;
+    }
+    .foot {
+        font-size: 0.7em;
+    }
 }
 
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 
+@media only screen and (min-width: 850px) {
+    .title {
+        font-size: 1.3rem;
+    }
+    #reStart,
+    #stopwatch {
+        font-size: 0.7em;
+        text-align: center;
+        border-radius: 5px;
+        margin: 5px 5px 5px 5px;
+        padding: 5px 10px 5px 10px;
+    }
+    .carD,
+    .up,
+    .hidden {
+        height: 133px;
+        width: 100px;
+    }
+    .carD {
+        position: relative;
+        margin: 5px;
+    }
+    .boatName {
+        font-size: 0.5em;
+        background-color: #d0d3fa;
+        padding-left: 2px;
+    }
+}
 
-/* @media only screen and (min-width: 600px) {} */
+@media only screen and (min-width: 1200px) {
+    .title {
+        font-size: 1.5rem;
+    }
+    #reStart,
+    #stopwatch {
+        font-size: 0.9em;
+        text-align: center;
+        border-radius: 5px;
+        margin: 5px 5px 5px 5px;
+        padding: 5px 10px 5px 10px;
+    }
+    .carD,
+    .up,
+    .hidden {
+        height: 160px;
+        width: 120px;
+    }
+    .carD {
+        position: relative;
+        margin: 5px;
+    }
+    .boatName {
+        font-size: 0.7em;
+        background-color: rgb(208, 211, 250, 0.6);
+        padding-left: 2px;
+        font-weight: 600;
+        color: #b302ca;
+        border-radius: 2px;
+        height: fit-content;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    .title {
+        font-size: 1.8rem;
+    }
+    #reStart,
+    #stopwatch {
+        font-size: 1.2em;
+        text-align: center;
+        border-radius: 5px;
+        margin: 5px 5px 5px 5px;
+        padding: 5px 10px 5px 10px;
+    }
+    .carD,
+    .up,
+    .hidden {
+        height: 200px;
+        width: 150px;
+    }
+    .carD {
+        position: relative;
+        margin: 5px;
+    }
+}
+
+@media only screen and (min-width: 1600px) {
+    .title {
+        font-size: 1.8rem;
+    }
+    #reStart,
+    #stopwatch {
+        font-size: 1.4em;
+        text-align: center;
+        border-radius: 5px;
+        margin: 5px 5px 5px 5px;
+        padding: 5px 10px 5px 10px;
+    }
+    .carD,
+    .up,
+    .hidden {
+        height: 240px;
+        width: 180px;
+    }
+    .carD {
+        position: relative;
+        margin: 5px;
+    }
+}
 
 
 /* Medium devices (landscape tablets, 768px and up) */

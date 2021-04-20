@@ -229,7 +229,7 @@ function shuffleArray() {
         faceUp.classList.add('up');
         cards.appendChild(faceUp);
         faceUp.style.backgroundImage = `url(${mixedUpPics[i].img})`;
-        var text = document.createElement('span');
+        var text = document.createElement('div');
         text.classList.add('boatName');
         text.innerText = `${mixedUpPics[i].photo}`;
         faceUp.appendChild(text);
@@ -365,7 +365,7 @@ function wellDone() {
     <div id="gameInfo" class="jumbotron">
         <div class="row d-flex justify-content-end">
             <div class="explain2 col-8">
-            You found all the pairs in :<br><span class="link"> ${Math.floor(c/60)} Min : ${c%60} Secs.'</span><br>Have another go and try and beat your time.<br> Press New Game button top left to start again.
+            You found all the pairs in :<br><span class="link"> ${Math.floor(c/60)} Min : ${c%60} Secs.</span><br>Have another go and try and beat your time.<br> Press <span style="color: #03944c;">New Game</span> button top left to start again.
             </div>
         </div>
         
