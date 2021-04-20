@@ -32,16 +32,20 @@
 <!-- Main body of website that will be seen -->
 
 <body id="backImage" class="mx-auto">
-    <section id="fade" class=" justify-content-center">
+
+    <section id="fade" class="flex container-fluid">
 
         <div class="container-fluid">
-            <div class="row d-flex justify-content-start">
-                <div class="col-sm-12">
-                    <div id="clock" class="dClock"></div>
-                </div>
+            <div class="row d-flex justify-content-center">
+                <div class="title col-12">SAILING PAIRS</div>
             </div>
-            <div class="row accordion justify-content-center">
-                <div class="title col-sm-12">SAILING PAIRS</div>
+            <div class="row d-flex justify-content-center">
+                <div id="clock" class="dClock col-12"></div>
+            </div>
+            <div class="row d-flex justify-content-center">sdfdf</div>
+
+            <div class="row justify-content-center">
+
             </div>
             <div class="r3 row d-flex justify-content-between">
                 <div class="col-2"> <button id="reStart" class="speed">New Game</button></div>
@@ -50,46 +54,52 @@
         </div>
 
         <div class="container-fluid">
-            <div id="gameInfo" class="jumbotron justify-content-center">
+            <div id="gameInfo" class="jumbotron">
                 <div class="row d-flex justify-content-end">
-                    <div class="col">
+                    <div class="explain1 col-8">
                         A simple memory game to help teach kids about sailing
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col d-flex">
-                        When you are ready press the Starting Gun below and the timer will start
-                    </div>
-                </div>
                 <div class="row d-flex justify-content-end">
-                    <div class="col ">
-                        <button id="slow" class="speed">Slow</button>
-                        <button id="medium" class="speed">Medium</button>
-                        <button id="quick" class="speed">Quick</button>
+                    <div class="explain2 col-8">
+                        If using a mobile device turn to landscape. <br> Select the game speed you want with the buttons below. <br> When ready press the <span><u>Starting Gun</u></span>.
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col d-flex justify-content-end">
-                        HAVE FUN
+                <div class="speedBox row justify-content-end">
+
+                    <div class="col-md-2"><button id="slow" class="speed">Slow</button></div>
+                    <div class="col-md-2"> <button id="medium" class="speed">Medium</button></div>
+                    <div class="col-md-2"> <button id="quick" class="speed">Quick</button></div>
+
+                </div>
+                <div class="row ">
+                    <div class="col-3 offset-7 d-flex justify-content-end ">
+                        HAVE FUN!!
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col d-flex justify-content-end">
+                <div class="row ">
+
+                    <div class="col-6 offset-6 d-flex justify-content-end ">
+
                         <button id="start" class="button">Starting Gun</button></div>
                 </div>
             </div>
         </div>
 
+        <div class="area container-fluid">
+            <div id="cardBox" class="cardBox d-flex row justify-content-center clearfix"></div>
+        </div>
+
 
         <footer>
-            <div class="area container-fluid">
-                <div id="cardBox" class="cardBox row d-flex justify-content-center"></div>
-            </div>
-
-            <div class="container-fluid">
-                <div class="row"></div>
+            <div class="container-fluid ">
+                <div class="row justify-content-between ">
+                    <div class="foot col-offset-0 ">&copy;Kieron O'Connell</div>
+                    <div class="foot col-offset-0 ">By You Did That</div>
+                </div>
             </div>
         </footer>
+        <div class="row "></div>
     </section>
 
 
@@ -99,11 +109,12 @@
 
 
 
+
     <!-- Scripts for bootstrap CDN -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-    <script src="assets/js/script1a.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js " integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js " integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI " crossorigin="anonymous "></script>
+    <script src="assets/js/script1a.js "></script>
 </body>
 
 </html>
