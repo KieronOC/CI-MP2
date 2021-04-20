@@ -25,7 +25,7 @@ function currentTime() {
 }
 currentTime();
 
-// An array of photos to use as background images
+// An array of photos to use as background images. Free images from the web.
 let pictures = [
     { 'photo': 'GP14', 'img': '/assets/images/GP14.jpg', },
     { 'photo': 'GP14', 'img': '/assets/images/GP14.jpg', },
@@ -53,6 +53,14 @@ let pictures = [
     { 'photo': 'Bosun', 'img': '/assets/images/Bosun.jpg', },
 ]
 
+// Different arrays of card pictures to go here in the future so the player can pick different subjects to play the game
+// with. The next iteration is planned to include sets of cards for; boat parts, sail parts, knots, clouds, wind strengths and perhaps basic rules of the road amoungst others.
+
+
+// The following code sets the time that cards will stay visible if a matching pair is not found. The user can
+// click one of three buttons on the game start page; Slow, Medium or Quick, which sets the <delayMiss> variable to
+// one of three different delays; 6sec, 3sec or 1sec. The default is 6 seconds and if no button is pressed and the
+// game started the default will be 6sec.
 
 let delayM = 400;
 let delayMc = 20;
@@ -61,8 +69,6 @@ let delayMiss = 6000;
 var sLow = document.getElementById('slow');
 var mEdium = document.getElementById('medium');
 var qUick = document.getElementById('quick');
-
-
 
 sLow.addEventListener('click', function() {
     mEdium.classList = '';
@@ -213,7 +219,7 @@ function shuffleArray() {
 
         var cards = document.createElement('div');
         // Add css for whole card (carD) plus 'photo' property from pictures to use for checking for a match later.
-        cards.classList.add('carD', `${mixedUpPics[i].photo}`);
+        cards.classList.add('carD', 'col-md-2', `${mixedUpPics[i].photo}`);
         // Unique Id for cards
         cards.id = i;
         box.appendChild(cards);
@@ -349,19 +355,6 @@ box.addEventListener('click', function(event) {
         }
     }
 });
-
-// function wellDone() {
-
-//     var clearDeck = document.getElementById('cardBox');
-//     clearDeck.innerHTML = '';
-//     var message = document.createElement('div')
-//     clearDeck.appendChild(message);
-//     message.classList.add('message');
-//     message.innerText = 'WELL DONE, Great Sailing. Press Slow, Medium or Quick butons, then press the Starting Gun to have another go.' + 'Your time was' + `${Math.floor(c/60)}+' Min : ' + ${c%60} +' Secs.'`;
-//     message.style.fontSize = '50px';
-
-
-// }
 
 
 function wellDone() {
