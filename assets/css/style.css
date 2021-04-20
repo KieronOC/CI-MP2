@@ -13,7 +13,7 @@ body {
 
 #backImage {
     /* Personal photo with no copyright issues for personal non commercial use */
-    background-image: url('/assets/images/fastnet-people2.jpeg');
+    background-image: url('/assets/images/fastnetPeople2.jpeg');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -94,7 +94,7 @@ body {
     font-family: 'Original Surfer', cursive;
     margin: 100px, 5px, 5px, 5px;
     background-color: #1c7ab5c7;
-    background-image: url('/assets/images/Card_Front.png');
+    background-image: url('/assets/images/CardFront.png');
     background-position: left;
     background-repeat: no-repeat;
     background-size: contain;
@@ -214,7 +214,7 @@ button {
     background-repeat: no-repeat;
     background-size: cover;
     /* Free image from https://www.netclipart.com/isee/ooTmi_sailboat-children-playing-kid-girl-sailing-sea-sailing/. OK for private non commericial use.*/
-    background-image: url('/assets/images/Card_Front.png');
+    background-image: url('/assets/images/CardFront.png');
     background-color: #81b2d1;
     position: absolute;
 }
