@@ -94,7 +94,7 @@ body {
     font-family: 'Original Surfer', cursive;
     margin: 100px, 5px, 5px, 5px;
     background-color: #1c7ab5c7;
-    background-image: url('../assets/images/Card_Front.png');
+    background-image: url('/assets/images/Card_Front.png');
     background-position: left;
     background-repeat: no-repeat;
     background-size: contain;
