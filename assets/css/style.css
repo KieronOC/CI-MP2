@@ -47,41 +47,37 @@ body {
 }
 
 .r3 {
-    margin-right: 15px;
+    margin: 5px 5px 20px 0px;
+}
+
+.c1 {
+    padding-left: 0;
 }
 
 #reStart {
-    background-color: #1c7ab585;
-    color: #1d0d1b;
-    font-size: 1em;
-    text-align: center;
+    color: #f3f3f7;
+    font-size: large;
+    margin-top: 40px;
     width: auto;
-    padding: 2px 10px 2px 10px;
-    border-radius: 5px;
+    /* height: 75px; */
+    /* Adapted from W3 schools */
+    background-image: linear-gradient(to top right, rgb(0, 255, 85), rgb(0, 130, 91), rgb(130, 180, 238));
+    box-shadow: 5px 5px 5px rgb(41, 36, 36);
+    margin: 5px 5px 5px 5px;
+    border-radius: 4px;
+    padding: 5px 10px 5px 10px;
 }
 
 #stopwatch {
-    background-color: #1c7ab585;
+    background-image: linear-gradient(to bottom right, rgb(225, 0, 255), rgb(237, 240, 245), rgb(189, 130, 238));
     color: #1d0d1b;
     font-size: 1em;
     text-align: center;
     max-width: 200px;
-    padding: 2px 10px 2px 10px;
+    height: fit-content;
+    height: fit-content;
     border-radius: 5px;
-}
-
-#start {
-    color: #f3f3f7;
-    font-size: large;
-    margin-top: 40px;
-    width: 200px;
-    height: 75px;
-    /* Adapted from W3 schools */
-    background-image: linear-gradient(to right, red, orange, green, blue, indigo, violet);
-    box-shadow: 5px 5px 5px rgb(41, 36, 36);
-    border: none;
-    margin: 5px 5px 5px 5px;
-    border-radius: 4px;
+    padding: 10px 15px 5px 15px;
 }
 
 
@@ -118,6 +114,10 @@ body {
     background-image: linear-gradient(to right, rgb(180, 162, 192), violet);
 }
 
+.link {
+    color: purple;
+}
+
 .speedBox {
     margin: 40px 15px 50px 5px;
 }
@@ -140,6 +140,45 @@ button {
 
 #quick {
     background-image: linear-gradient(to right, rgb(238, 155, 130), rgb(238, 40, 34));
+}
+
+.speedPick {
+    border: 5px solid rgb(252, 255, 213);
+}
+
+
+/* .fun1 {
+    background-color: rgba(124, 123, 197, 0.795);
+    margin-bottom: 40px;
+    text-align: center;
+    border-radius: 150%;
+    padding: 10px;
+} */
+
+.fun {
+    background-color: rgba(123, 192, 197, 0.425);
+    fill-opacity: inherit;
+    background-position: relative;
+    font-size: 3em;
+    color: rgb(79, 18, 119);
+    text-shadow: 2px 2px 5px #e7e2e2;
+    border-radius: 150%;
+    padding: 15px;
+    text-align: center;
+}
+
+#start {
+    color: #f3f3f7;
+    font-size: large;
+    margin-top: 40px;
+    width: 200px;
+    height: 75px;
+    /* Adapted from W3 schools */
+    background-image: linear-gradient(to right, red, orange, green, blue, indigo, violet);
+    box-shadow: 5px 5px 5px rgb(41, 36, 36);
+    border: none;
+    margin: 5px 5px 5px 5px;
+    border-radius: 4px;
 }
 
 
@@ -166,7 +205,7 @@ button {
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url('/assets/images/Card_Front.png');
-    background-color: lightblue;
+    background-color: #81b2d1;
     height: 200px;
     width: 150px;
     position: absolute;

@@ -53,6 +53,72 @@ let pictures = [
     { 'photo': 'Bosun', 'img': '/assets/images/Bosun.jpg', },
 ]
 
+
+let delayM = 400;
+let delayMc = 20;
+let delayMiss = 6000;
+
+var sLow = document.getElementById('slow');
+var mEdium = document.getElementById('medium');
+var qUick = document.getElementById('quick');
+
+
+
+sLow.addEventListener('click', function() {
+    mEdium.classList = '';
+    qUick.classList = '';
+    if (sLow.classList.contains('speedPick')) {
+        sLow.classList.remove('speedPick');
+        delayMiss = 6000;
+        return
+    } else {
+        sLow.classList.add('speedPick')
+        delayMiss = 6000;
+        return
+    }
+});
+
+mEdium.addEventListener('click', function() {
+    sLow.classList = '';
+    qUick.classList = '';
+    if (mEdium.classList.contains('speedPick')) {
+        mEdium.classList.remove('speedPick');
+        delayMiss = 6000;
+        return
+    } else {
+        mEdium.classList.add('speedPick')
+        delayMiss = 3000;
+        return
+    }
+});
+
+qUick.addEventListener('click', function() {
+    mEdium.classList = '';
+    sLow.classList = '';
+    if (qUick.classList.contains('speedPick')) {
+        qUick.classList.remove('speedPick');
+        delayMiss = 6000;
+        return
+    } else {
+        qUick.classList.add('speedPick')
+        delayMiss = 1000;
+        return
+    }
+});
+
+// medium.addEventListener('click', function() {
+//     medium.classList.add('speedPick')
+// })
+
+// quick.addEventListener('click', function() {
+//     quick.classList.add('speedPick')
+// })
+
+
+
+
+
+
 let mixedUpPics;
 
 // Start game by pressing start button
@@ -107,9 +173,7 @@ function timedCount() {
     t = setTimeout(timedCount, 1000);
 }
 
-let delayM = 400;
-let delayMc = 20;
-let delayMiss = 3000;
+
 
 // Gets the player to in effect refresh the page before pressing the Start button to start the timer and shuffle the cards
 var newGame = document.getElementById('reStart');
