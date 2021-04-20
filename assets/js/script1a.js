@@ -350,15 +350,42 @@ box.addEventListener('click', function(event) {
     }
 });
 
+// function wellDone() {
+
+//     var clearDeck = document.getElementById('cardBox');
+//     clearDeck.innerHTML = '';
+//     var message = document.createElement('div')
+//     clearDeck.appendChild(message);
+//     message.classList.add('message');
+//     message.innerText = 'WELL DONE, Great Sailing. Press Slow, Medium or Quick butons, then press the Starting Gun to have another go.' + 'Your time was' + `${Math.floor(c/60)}+' Min : ' + ${c%60} +' Secs.'`;
+//     message.style.fontSize = '50px';
+
+
+// }
+
+
 function wellDone() {
 
     var clearDeck = document.getElementById('cardBox');
     clearDeck.innerHTML = '';
-    var message = document.createElement('div')
-    clearDeck.appendChild(message);
-    message.classList.add('message');
-    message.innerText = 'WELL DONE, Great Sailing. Press Slow, Medium or Quick butons, then press the Starting Gun to have another go.' + 'Your time was' + `${Math.floor(c/60)}+' Min : ' + ${c%60} +' Secs.'`;
-    message.style.fontSize = '50px';
+    var message = ` <div class="container-fluid">
+    <div id="gameInfo" class="jumbotron">
+        <div class="row d-flex justify-content-end">
+            <div class="explain2 col-8">
+            You found all the pairs in :<br><span class="link"> ${Math.floor(c/60)} Min : ${c%60} Secs.'</span><br>Have another go and try and beat your time.<br> Press New Game button top left to start again.
+            </div>
+        </div>
+        
+        <div class="fun1 row d-flex justify-content-center">
+            <div class="fun col-5 offset-4">WELL DONE!!<br>You Did It!
+            </div>
+        </div>
+        <div class="row ">
+    </div>
+</div>`
+    clearDeck.innerHTML = message;
+
+
 
 
 }

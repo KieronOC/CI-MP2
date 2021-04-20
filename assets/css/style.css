@@ -1,9 +1,14 @@
 /* Background Image */
 
+html {
+    margin: 0px 20px 0px 20px;
+}
+
 body {
     font-family: 'Original Surfer', cursive;
     font-size: 20px;
     min-height: 100vh;
+    max-width: 99%;
 }
 
 #backImage {
