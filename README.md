@@ -7,7 +7,7 @@
 
 ***
 
-# Sailing Team Management & Communication
+# Pairs game to help teach aspects of sailing and associated knowledge to kids.
 ![GB Flag](https://github.githubassets.com/images/icons/emoji/unicode/1f1ec-1f1e7.png?v8 )
 
 ## Background Description
@@ -22,37 +22,55 @@ I produced a Planes Analysis before starting the project, which sets out the pur
 
  * [ML Bowen Planes Analysis](https://github.com/KieronOC/CI-MP1/blob/master/background_work/Planes%20Analysis-ML%20Bowen%20Website.pdf)
 
-I also constructed a basic wireframe document prior to starting to write the code, which can be read here :
+I also constructed a basic wireframe document prior to starting to write the code, which is set out in the above document.
 
- * [ML Bowen Wireframe](https://github.com/KieronOC/CI-MP1/blob/master/background_work/ML%20Bowen%20Wireframe%20200608.pdf)
+The site works for:
 
-There is more work to do on making sure the sight is accessible for all potential users which requires greater knowledge and skills than I have at present. I have used alt image tags and headings wherever possible. 
+* Mobile
+* Tablet
+* Desktop
+
+It has been designed to work in Landscape orientation for Mobiles and Laptops
+
+### Resizing
+
+The main feature of the game the cards themselves have been designed to resize to a small mobile. On a small mobile the images are identifiable and the text name at the top of the card helps, but more work is needed to consider how to make the images for the learning objectives of this application clearer at smaller sizes.
+
 
 ## 2. Features
 
 > ### 2.1 Existing Features
->The site is a basic information site for people landing on it from a;
->* Web Search
->* Social Media link
->* Direct entry
 >
-> The overidding aim being to encourage a user to call the therapist directly or gain sufficient information quickly and easily and then call. Therefore the main features comprise :
->* 6 pages that allow the user to find out more about the treatment and about the therapist.
->* Call or email the therapist by clicking on the phone number.
->* Fill out a contact form (which is not yet functional).
->* Each page has been reduced to the minimum amount of text possible that conveys the most important details. An accordian solution has been sued to allow the user to open up greater levels of information as they choose on the pages where this is relevant.
+The game works as follows :
+> 
+- [] werwer
+
 
 > ### 2.2 Features Left to Implement
 >
-> As per the Planes analysis above there are features left to implement once I have the necessary skills as follows :
+>As per the Planes analysis above there are further features left to implement that will make this a better learning tool :
 >
 >The most immediate next steps are to:
 >
-> * Learn and write the code to make the contact form live.
-> * Write a GDPR statement and opt out buttons in line with the form submission.
-> * Put the website up on a hosted site with an SSL Certificate. 
+>  [ ] Produce further sets of pairs cards by subject areas:
+>    * [ ] Sail parts
+>    * [ ] Boat parts
+>    * [ ] Knot types
+>    * [ ] Cloud formations
+>    * [ ] Basic rules
+>    * [ ] and probably others
 >
->Thereafter the following are the principle features the cient would like to explore implementing:
+>These can be added by adding an object array of images in the same way that has been done in the Javascript File for the current version
+>
+>Selection buttons can be added to the start page for the user to choose which which subject they would like to play the game with.
+>
+>[ ] Produce further sets of pairs cards by subject areas:
+>    * [ ] Sail parts
+>    * [ ] Boat parts
+>    * [ ] Knot types
+>    * [ ] Cloud formations
+>    * [ ] Basic rules
+>    * [ ] and probably others
 >
 > 1. Bigger technical reference section with body diagrams and treatment photos.
 > 2. Ability for customers to post comments and testimonials directly.

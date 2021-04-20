@@ -112,18 +112,6 @@ qUick.addEventListener('click', function() {
     }
 });
 
-// medium.addEventListener('click', function() {
-//     medium.classList.add('speedPick')
-// })
-
-// quick.addEventListener('click', function() {
-//     quick.classList.add('speedPick')
-// })
-
-
-
-
-
 
 let mixedUpPics;
 
@@ -208,12 +196,7 @@ function shuffleArray() {
     var jumBo = document.getElementById('gameInfo');
     jumBo.remove();
 
-
-
-
     // Create the card's HTML by looping through the array above
-
-    // var box = document.getElementById('cardBox');
 
     for (i = 0; i < mixedUpPics.length; i++) {
 
@@ -269,6 +252,7 @@ let previousTarget = null;
 // This then sets a for loop through the above array of divs
 // for (let i = 0; i < gameCards.length; i++) {
 // For every div an eventlistener is added reacting to a click
+
 var choice;
 var correct = 0;
 box.addEventListener('click', function(event) {
@@ -320,7 +304,6 @@ box.addEventListener('click', function(event) {
                     for (let i = 0; i < bothCards.length; i++) {
                         bothCards[i].previousSibling.classList.remove('up');
                         bothCards[i].previousSibling.firstChild.innerText = '';
-
                     }
                     correct += 1;
                     if (correct === 12) {
@@ -377,8 +360,4 @@ function wellDone() {
     </div>
 </div>`
     clearDeck.innerHTML = message;
-
-
-
-
 }
