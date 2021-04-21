@@ -234,6 +234,45 @@ button {
 
 /* Extra small devices (phones, 600px and down) */
 
+
+/* https://websiteedu.com/media-queries-for-mobile-and-tablets/ 
+*/
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+    .title {
+        font-size: 0.8rem;
+    }
+    .dClock {
+        font-size: 0.8rem;
+    }
+    #reStart,
+    #stopwatch {
+        font-size: 0.5em;
+        text-align: center;
+        border-radius: 5px;
+        margin: 5px 5px 5px 5px;
+        padding: 5px 10px 5px 10px;
+    }
+    .carD,
+    .up,
+    .hidden {
+        height: 65px;
+        width: 50px;
+    }
+    .carD {
+        position: relative;
+        margin: 5px;
+    }
+    .boatName {
+        font-size: 0.35em;
+        background-color: #d0d3fa;
+        padding-left: 2px;
+    }
+    .foot {
+        font-size: 0.7em;
+    }
+}
+
 @media only screen and (max-width: 850px) {
     .title {
         font-size: 0.8rem;
