@@ -29,7 +29,7 @@
 
 </head>
 
-<!-- Main body of website that will be seen on first load -->
+<!-- Main body of website that will be seen on first load. This puts all the users needs to know on one viewport irrespective of size so they should be able to see what to do to start playing as quickly as possible-->
 
 <body id="backImage" class="mx-auto">
 
@@ -43,12 +43,13 @@
             <div class="row justify-content-center">
             </div>
             <div class="r3 row d-flex justify-content-between">
-                <div class="c1 col-xs-2"> <button id="reStart" class="speed">New Game</button></div>
+                <div class="c1 col-xs-2"> <button id="reStart" class="speed">Main Menu</button></div>
                 <div class="c1 col-xs-2" id="stopwatch">Timer 00:00</div>
             </div>
         </div>
 
         <div class="explainTop container-fluid">
+            <!-- The code from here to the footer will be seen before starting to play but once a game has started all this information will go to be replaced by the cards and minimal other information so the player only has what they need to screen to play the game. -->
             <div id="gameInfo" class="jumbotron">
                 <div class="row explain0 d-flex justify-content-end">
                     <div class="explain1 col-xs-12">
@@ -58,7 +59,7 @@
                 <div class="row explain0 d-flex justify-content-end">
                     <div class="explain2 col-xs-12">
                         1. If using a mobile device turn it to landscape. <br> 2. Choose a game speed by pressing the slow, medium or quick buttons below.<br><span>&#40;Game will play at Slow speed if nothing selected.&#41;</span> <br>3. Press the
-                        <span style="color: #03944c;">New Game</span> button at any time to start again. <br><br> When ready press the
+                        <span style="color: #03944c;">Main Menu</span> button at any time to start again. <br><br> When ready press the
                         <span class="link">Starting Gun. &#40; Below.&#41;</span>
                     </div>
                 </div>
@@ -83,13 +84,16 @@
         </div>
 
         <div id="gameInstr" class="container-fluid">
+            <!-- The one line game instructions are loaded above the cards here. -->
             <div class="area row">
                 <div class=" area2 justify-content-sm-center col-12">
                     <div id="cardBox" class="cardBox row justify-content-sm-center"></div>
+                    <!-- This div is where the game cards are loaded into once the player press the starting gun button. -->
                 </div>
             </div>
         </div>
 
+        <!-- The footer just contains simple onwership information about the site -->
         <footer>
             <div class="container-fluid ">
                 <div class="row justify-content-between ">
@@ -102,16 +106,11 @@
     </section>
 
 
-
-
-
-
-
-
     <!-- Scripts for bootstrap CDN -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj " crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js " integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI " crossorigin="anonymous"></script>
+    <!-- Single Javascript file written by KJOC that drives the game. -->
     <script src="assets/js/script.js"></script>
 </body>
 

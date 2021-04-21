@@ -1,4 +1,4 @@
-/* Background Image */
+/* Background and main page areas */
 
 html {
     margin: 0px 10px 0px 10px;
@@ -19,6 +19,9 @@ body {
     background-size: cover;
 }
 
+
+/* Sets a section above the background image so that it can be set to make the background photograph in effect as transparent as needed to make the design sitting above more legible */
+
 #fade {
     background-color: rgba(148, 149, 192, 0.507);
     min-height: inherit;
@@ -26,7 +29,7 @@ body {
 }
 
 
-/* Title */
+/* Title, clock and timer and associated displays */
 
 .title,
 .dClock {
@@ -81,12 +84,6 @@ body {
     max-width: 200px;
     height: fit-content;
 }
-
-
-/* User entry */
-
-
-/* Navigation to 3 games pages */
 
 
 /* Start page before game start */
@@ -147,6 +144,9 @@ button {
     margin: 5px 5px 5px 5px;
     border-radius: 4px;
 }
+
+
+/* Method for how to make backgrounds multicoloured learnt from this site https://www.html-code-generator.com/html/rainbow-text-generator */
 
 #slow {
     background-image: linear-gradient(to right, rgb(75, 153, 56), rgb(238, 195, 130));
@@ -250,6 +250,12 @@ button {
     font-weight: 900;
 }
 
+
+/* The following are the media queriery CSS to make the game work across screen sizes. The transition across sizes works OK, but there are some jumpy transitions particularly between landscape and portait to be fixed so the sizing changes are smooth */
+
+
+/* Very small width */
+
 @media only screen and (max-width: 250px) {
     .area,
     .area2 {
@@ -270,6 +276,9 @@ button {
         font-size: 0.5em;
     }
 }
+
+
+/* Upto 750px; landscape iPhone */
 
 @media only screen and (max-width: 750px) {
     .title {
@@ -347,7 +356,7 @@ button {
 }
 
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
+/* From 750px upwards */
 
 @media only screen and (min-width: 750px) {
     .title {
@@ -386,6 +395,9 @@ button {
     }
 }
 
+
+/* From  here onwards adjustments are made so that the game will fill the screens on larger devices and look proportionate. */
+
 @media only screen and (min-width: 1200px) {
     .title {
         font-size: 1.5rem;
@@ -422,6 +434,9 @@ button {
     }
 }
 
+
+/* From 1400px upwards, to make the game fill the screens on larger devices */
+
 @media only screen and (min-width: 1400px) {
     .title {
         font-size: 1.8rem;
@@ -445,6 +460,9 @@ button {
         margin: 5px;
     }
 }
+
+
+/* From 1600px upwards, to make the game fill the screens on larger devices */
 
 @media only screen and (min-width: 1600px) {
     .title {
@@ -481,3 +499,6 @@ footer {
 .foot {
     margin: 0 5px 0 5px;
 }
+
+
+/* END */
