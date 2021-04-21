@@ -92,7 +92,7 @@ body {
 
 .jumbotron {
     font-family: 'Original Surfer', cursive;
-    margin: 100px, 5px, 5px, 5px;
+    margin: 100px 5px 5px 5px;
     background-color: #1c7ab5c7;
     background-image: url('../images/cardfront.png');
     background-position: left;
@@ -150,7 +150,6 @@ button {
 .fun {
     background-color: rgba(123, 192, 197, 0.425);
     fill-opacity: inherit;
-    background-position: relative;
     font-size: 3em;
     color: rgb(79, 18, 119);
     text-shadow: 2px 2px 5px #e7e2e2;
@@ -228,7 +227,6 @@ button {
     color: rgba(46, 43, 54, 0.808);
     font-variant-caps: all-petite-caps;
     font-weight: 900;
-    font-display: block;
 }
 
 

@@ -231,7 +231,6 @@ function shuffleArray() {
     return;
 }
 
-
 // This section intended to power the selection of two cards, turn them over, check them for a match, turn them back if not matched and make them dissappear if they are.
 
 // Set the variables required to zero
@@ -239,8 +238,6 @@ let guess1 = '';
 let guess2 = '';
 let counter = 0;
 let previousTarget = null;
-
-
 
 
 // Gets all the divs containing the 3 children divs that contain the pairs pictures, hidden face and a blank
