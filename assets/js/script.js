@@ -342,14 +342,14 @@ function wellDone() {
     clearDeck.innerHTML = '';
     var message = ` <div class="container-fluid">
     <div id="gameInfo" class="jumbotron">
-        <div class="row d-flex justify-content-end">
-            <div class="explain2 col-8">
+        <div class="row explain0 d-flex justify-content-end">
+            <div class="explain1 col-xs-12">
             You found all the pairs in :<br><span class="link"> ${Math.floor(c/60)} Min : ${c%60} Secs.</span><br>Have another go and try and beat your time.<br> Press <span style="color: #03944c;">New Game</span> button top left to start again.
             </div>
         </div>
         
         <div class="fun1 row d-flex justify-content-center">
-            <div class="fun col-5 offset-4">WELL DONE!!<br>You Did It!
+            <div class="fun col-sm-5 offset-4">WELL DONE!!<br>You Did It!
             </div>
         </div>
         <div class="row ">
