@@ -181,6 +181,10 @@ button {
     border-radius: 4px;
 }
 
+.gun {
+    margin: 5px 25px 5px 5px;
+}
+
 
 /* Cards */
 
@@ -290,7 +294,7 @@ button {
         padding-left: 50px;
     }
     #start {
-        font-size: 0.55em;
+        font-size: 0.5em;
     }
 }
 
@@ -405,7 +409,7 @@ button {
         padding: 5px 10px 5px 10px;
     }
     .jumbotron {
-        padding: 50px 20px 100px 20px;
+        margin: 50px 20px 100px 20px;
     }
     .carD,
     .up,
