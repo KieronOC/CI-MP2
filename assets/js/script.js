@@ -121,6 +121,23 @@ var start = document.querySelector('#start');
 // Button to start timer and shuffle the cards on screen
 start.addEventListener('click', timedCount);
 
+start.addEventListener('click', removeJumbo);
+
+// Remove Jumbotron
+
+function removeJumbo() {
+    var jumBo = document.getElementById('gameInfo');
+    jumBo.remove();
+
+
+    var gameTitle = document.getElementById('gameInstr');
+    var nwDiv = document.createElement('div');
+    var iB = document.getElementsByClassName('area');
+    console.log(iB);
+    nwDiv.classList.add('gameInst', 'row', 'justify-content-center');
+    gameTitle.insertBefore(nwDiv, iB[0]);
+    nwDiv.innerText = 'Find the matching pairs. 2 selections at a time. Cards will turn back automatically.';
+}
 
 //  Starts the game by shuffling the deck and then adding the cards to the screen through f(shuffleArray), but stops more cards being added if Start button is pressed more than once.
 var hits = 0;
@@ -180,6 +197,9 @@ let box = document.getElementById('cardBox');
 //Durstenfeld shuffle from Stackoverflow at : https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array.
 
 function shuffleArray() {
+
+
+
     // The following 5 lines, Based on Durstenfeld et al, converts the numbered list into a randomely shuffled list.
     for (var i = 0; i < pictures.length; i++) {
         var j = Math.floor(Math.random() * pictures.length);
@@ -190,10 +210,9 @@ function shuffleArray() {
     mixedUpPics = pictures;
     console.log(mixedUpPics);
 
-    // Remove Jumbotron
 
-    var jumBo = document.getElementById('gameInfo');
-    jumBo.remove();
+
+
 
     // Create the card's HTML by looping through the array above
 
@@ -216,7 +235,6 @@ function shuffleArray() {
         text.innerText = `${mixedUpPics[i].photo}`;
         faceUp.appendChild(text);
 
-
         // Hidden cards face
         var faceHidden = document.createElement('div');
         faceHidden.classList.add('hidden');
@@ -229,6 +247,9 @@ function shuffleArray() {
     }
     return;
 }
+
+
+
 
 // This section intended to power the selection of two cards, turn them over, check them for a match, turn them back if not matched and make them dissappear if they are.
 

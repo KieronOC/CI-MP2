@@ -111,6 +111,14 @@ body {
     margin: 0px 1px 0px 1px;
 }
 
+.gameInst {
+    background-color: rgb(250, 235, 215, 0.7);
+    margin: 10px 5px 15px 5px;
+    border-radius: 4px;
+    text-align: center;
+    padding: 5px;
+}
+
 .explain1,
 .explain2 {
     background-color: rgb(250, 235, 215, 0.7);
@@ -242,49 +250,6 @@ button {
     font-weight: 900;
 }
 
-
-/* Extra small devices (phones, 600px and down) */
-
-
-/* https://websiteedu.com/media-queries-for-mobile-and-tablets/ 
-*/
-
-
-/* @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
-    .title {
-        font-size: 0.8rem;
-    }
-    .dClock {
-        font-size: 0.8rem;
-    }
-    #reStart,
-    #stopwatch {
-        font-size: 0.5em;
-        text-align: center;
-        border-radius: 5px;
-        margin: 2px 2px 2px 2px;
-        padding: 5px 5px 5px 5px;
-    }
-    .carD,
-    .up,
-    .hidden {
-        height: 73px;
-        width: 55px;
-    }
-    .carD {
-        position: relative;
-        margin: 1px;
-    }
-    .boatName {
-        font-size: 0.35em;
-        background-color: #d0d3fa;
-        padding-left: 2px;
-    }
-    .foot {
-        font-size: 0.7em;
-    }
-} */
-
 @media only screen and (max-width: 250px) {
     .area,
     .area2 {
@@ -294,6 +259,14 @@ button {
         padding-left: 50px;
     }
     #start {
+        font-size: 0.5em;
+    }
+    .gameInst {
+        background-color: rgba(250, 235, 215, 0.842);
+        margin: 10px 5px 15px 5px;
+        border-radius: 4px;
+        justify-content: center;
+        padding: 5px;
         font-size: 0.5em;
     }
 }
@@ -329,6 +302,7 @@ button {
         margin: 2px 2px 2px 2px;
     }
     .fun {
+        background-color: rgba(123, 192, 197, 0.897);
         font-size: 1.5em;
         padding: 5px 3px 5px 3px;
         margin-right: 75px;
@@ -337,6 +311,14 @@ button {
         font-size: 0.8em;
         width: 220px;
         height: 40px;
+    }
+    .gameInst {
+        background-color: rgba(250, 235, 215, 0.842);
+        margin: 5px 2px 5px 2px;
+        border-radius: 4px;
+        justify-content: center;
+        padding: 1px;
+        font-size: 0.5em;
     }
     .carD,
     .up,
@@ -378,6 +360,14 @@ button {
         border-radius: 5px;
         margin: 5px 5px 5px 5px;
         padding: 5px 10px 5px 10px;
+    }
+    .gameInst {
+        background-color: rgba(250, 235, 215, 0.842);
+        margin: 10px 5px 15px 5px;
+        border-radius: 4px;
+        justify-content: center;
+        padding: 5px;
+        font-size: 1.2em;
     }
     .carD,
     .up,
