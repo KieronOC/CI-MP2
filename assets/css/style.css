@@ -250,14 +250,14 @@ button {
         font-size: 0.5em;
         text-align: center;
         border-radius: 5px;
-        margin: 5px 5px 5px 5px;
-        padding: 5px 10px 5px 10px;
+        margin: 2px 2px 2px 2px;
+        padding: 5px 5px 5px 5px;
     }
     .carD,
     .up,
     .hidden {
-        height: 65px;
-        width: 50px;
+        height: 73px;
+        width: 55px;
     }
     .carD {
         position: relative;
@@ -285,14 +285,14 @@ button {
         font-size: 0.5em;
         text-align: center;
         border-radius: 5px;
-        margin: 5px 5px 5px 5px;
-        padding: 5px 10px 5px 10px;
+        margin: 2px 2px 2px 2px;
+        padding: 5px 5px 5px 5px;
     }
     .carD,
     .up,
     .hidden {
-        height: 65px;
-        width: 50px;
+        height: 73px;
+        width: 55px;
     }
     .carD {
         position: relative;
