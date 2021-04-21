@@ -236,7 +236,8 @@ button {
 /* https://websiteedu.com/media-queries-for-mobile-and-tablets/ 
 */
 
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+
+/* @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
     .title {
         font-size: 0.8rem;
     }
@@ -269,7 +270,7 @@ button {
     .foot {
         font-size: 0.7em;
     }
-}
+} */
 
 @media only screen and (max-width: 850px) {
     .title {
