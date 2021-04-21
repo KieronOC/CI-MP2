@@ -20,7 +20,7 @@ function currentTime() {
             return k;
         }
     }
-    document.getElementById("clock").innerText = 'Time now : ' + hour + " : " + min + " : " + sec;
+    document.getElementById("clock").innerText = '' + hour + " : " + min + " : " + sec + ' Z+1';
     var t = setTimeout(function() { currentTime(); }, 1000);
 }
 currentTime();

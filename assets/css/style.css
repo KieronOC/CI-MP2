@@ -22,6 +22,7 @@ body {
 #fade {
     background-color: rgba(148, 149, 192, 0.507);
     min-height: inherit;
+    padding: 2px 2px 2px 2px;
 }
 
 
@@ -33,7 +34,7 @@ body {
 }
 
 .title {
-    color: #ee6ffa;
+    color: #fce8ff;
     text-align: left;
     width: fit-content;
     border-radius: 5px;
@@ -42,7 +43,7 @@ body {
 
 .dClock {
     /* background-color: #1c7ab585; */
-    color: #d0d3fa;
+    color: #dcddee;
     text-align: right;
     width: 300px;
     border-radius: 5px;
@@ -92,14 +93,22 @@ body {
 
 .jumbotron {
     font-family: 'Original Surfer', cursive;
-    margin: 100px 5px 5px 5px;
+    margin: 5px 5px 5px 5px;
     background-color: #1c7ab5c7;
     background-image: url('../images/cardfront.png');
     background-position: left;
     background-repeat: no-repeat;
     background-size: contain;
     /* border: solid 15px #1c7ab5c7; */
-    padding: 10px 15px 10px 10px;
+    padding: 5px 5px 5px 5px;
+}
+
+.explainTop {
+    padding: 2px 2px 2px 2px;
+}
+
+.explain0 {
+    margin: 0px 1px 0px 1px;
 }
 
 .explain1,
@@ -272,7 +281,17 @@ button {
     }
 } */
 
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 250px) {
+    .area,
+    .area2 {
+        justify-content: space-between;
+    }
+    .cardBox {
+        padding-left: 50px;
+    }
+}
+
+@media only screen and (max-width: 750px) {
     .title {
         font-size: 0.8rem;
     }
@@ -287,30 +306,61 @@ button {
         margin: 2px 2px 2px 2px;
         padding: 5px 5px 5px 5px;
     }
+    .explain1,
+    .explain2 {
+        font-size: 0.7rem;
+        font-weight: 500;
+    }
+    .explain2 {
+        background-color: rgba(250, 235, 215, 0.842);
+    }
+    .speed {
+        font-size: 0.8rem;
+        width: 75px;
+    }
+    .speedBox {
+        margin: 2px 2px 2px 2px;
+    }
+    .fun {
+        font-size: 1.5em;
+        padding: 5px 3px 5px 3px;
+        margin-right: 75px;
+    }
+    #start {
+        font-size: 0.8em;
+        width: 200px;
+        height: 40px;
+    }
     .carD,
     .up,
     .hidden {
         height: 73px;
         width: 55px;
     }
-    .carD {
-        position: relative;
-        margin: 1px;
+    .cardBox {
+        padding-left: 20px;
     }
-    .boatName {
-        font-size: 0.35em;
-        background-color: #d0d3fa;
-        padding-left: 2px;
-    }
-    .foot {
-        font-size: 0.7em;
-    }
+}
+
+.carD {
+    position: relative;
+    margin: 1px;
+}
+
+.boatName {
+    font-size: 0.35em;
+    background-color: #d0d3fa;
+    padding-left: 2px;
+}
+
+.foot {
+    font-size: 0.7em;
 }
 
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 
-@media only screen and (min-width: 850px) {
+@media only screen and (min-width: 750px) {
     .title {
         font-size: 1.3rem;
     }
@@ -350,6 +400,9 @@ button {
         border-radius: 5px;
         margin: 5px 5px 5px 5px;
         padding: 5px 10px 5px 10px;
+    }
+    .jumbotron {
+        padding: 50px 20px 100px 20px;
     }
     .carD,
     .up,
