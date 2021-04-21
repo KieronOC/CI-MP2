@@ -21,7 +21,7 @@ function currentTime() {
         }
     }
     document.getElementById("clock").innerText = 'Time now : ' + hour + " : " + min + " : " + sec;
-    var t = setTimeout(function() { currentTime() }, 1000);
+    var t = setTimeout(function() { currentTime(); }, 1000);
 }
 currentTime();
 
@@ -51,7 +51,7 @@ let pictures = [
     { 'photo': 'Lark', 'img': 'assets/images/lark.jpg', },
     { 'photo': 'Bosun', 'img': 'assets/images/bosun.jpg', },
     { 'photo': 'Bosun', 'img': 'assets/images/bosun.jpg', },
-]
+];
 
 // Different arrays of card pictures to go here in the future so the player can pick different subjects to play the game
 // with. The next iteration is planned to include sets of cards for; boat parts, sail parts, knots, clouds, wind strengths and perhaps basic rules of the road amoungst others.
@@ -63,7 +63,6 @@ let pictures = [
 // game started the default will be 6sec.
 
 let delayM = 400;
-let delayMc = 20;
 let delayMiss = 2000;
 
 var sLow = document.getElementById('slow');
@@ -76,11 +75,11 @@ sLow.addEventListener('click', function() {
     if (sLow.classList.contains('speedPick')) {
         sLow.classList.remove('speedPick');
         delayMiss = 2000;
-        return
+        return;
     } else {
-        sLow.classList.add('speedPick')
+        sLow.classList.add('speedPick');
         delayMiss = 2000;
-        return
+        return;
     }
 });
 
@@ -90,11 +89,11 @@ mEdium.addEventListener('click', function() {
     if (mEdium.classList.contains('speedPick')) {
         mEdium.classList.remove('speedPick');
         delayMiss = 2000;
-        return
+        return;
     } else {
-        mEdium.classList.add('speedPick')
+        mEdium.classList.add('speedPick');
         delayMiss = 1000;
-        return
+        return;
     }
 });
 
@@ -104,11 +103,11 @@ qUick.addEventListener('click', function() {
     if (qUick.classList.contains('speedPick')) {
         qUick.classList.remove('speedPick');
         delayMiss = 2000;
-        return
+        return;
     } else {
-        qUick.classList.add('speedPick')
+        qUick.classList.add('speedPick');
         delayMiss = 500;
-        return
+        return;
     }
 });
 
@@ -131,7 +130,7 @@ start.addEventListener('click', function() {
         return;
     } else {
         shuffleArray();
-    };
+    }
 });
 
 // Start the game itself of clicking and checking pairs of cards selected
@@ -219,12 +218,12 @@ function shuffleArray() {
 
 
         // Hidden cards face
-        var faceHidden = document.createElement('div')
+        var faceHidden = document.createElement('div');
         faceHidden.classList.add('hidden');
         cards.appendChild(faceHidden);
 
         // Blank card for when cards matched to create blank space
-        var faceHidden = document.createElement('div')
+        faceHidden = document.createElement('div');
         faceHidden.classList.add('blank');
         cards.appendChild(faceHidden);
     }
@@ -277,8 +276,8 @@ box.addEventListener('click', function(event) {
 
             console.log(guess1);
             // We add a class to the clicked card to say this is a guess
-            choice.classList.add('guess')
-                // We remove the hidden class to show the dinghy picture behind
+            choice.classList.add('guess');
+            // We remove the hidden class to show the dinghy picture behind
             choice.classList.remove('hidden');
             // At this point the programme will jump to the end of the play function and fire again at Line 185
 
@@ -289,7 +288,7 @@ box.addEventListener('click', function(event) {
             //     return;
             // }
             console.log(guess2);
-            choice.classList.add('guess')
+            choice.classList.add('guess');
             choice.classList.remove('hidden');
             // We now have two guesses recorded so we now need to collect the two elements with classes of 'guess' and check if the guess1 and guess2 variables are the same.
         }
@@ -308,7 +307,7 @@ box.addEventListener('click', function(event) {
                         return wellDone();
                     } else {
 
-                    };
+                    }
                 }, delayM);
                 setTimeout(function() {
                     guess1 = '';
@@ -316,7 +315,7 @@ box.addEventListener('click', function(event) {
                     counter = 0;
                     previousTarget = null;
                     for (let i = 0; i < bothCards.length; i++) {
-                        bothCards[i].classList.remove('guess')
+                        bothCards[i].classList.remove('guess');
                     }
                 }, delayM);
 
@@ -327,8 +326,8 @@ box.addEventListener('click', function(event) {
                     counter = 0;
                     previousTarget = null;
                     for (let i = 0; i < bothCards.length; i++) {
-                        bothCards[i].classList.add('hidden')
-                        bothCards[i].classList.remove('guess')
+                        bothCards[i].classList.add('hidden');
+                        bothCards[i].classList.remove('guess');
                     }
                 }, delayMiss);
             }
@@ -355,6 +354,6 @@ function wellDone() {
         </div>
         <div class="row ">
     </div>
-</div>`
+</div>`;
     clearDeck.innerHTML = message;
 }
