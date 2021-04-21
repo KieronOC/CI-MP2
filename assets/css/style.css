@@ -289,6 +289,9 @@ button {
     .cardBox {
         padding-left: 50px;
     }
+    #start {
+        font-size: 0.7em;
+    }
 }
 
 @media only screen and (max-width: 750px) {
@@ -328,7 +331,7 @@ button {
     }
     #start {
         font-size: 0.8em;
-        width: 200px;
+        width: 220px;
         height: 40px;
     }
     .carD,
