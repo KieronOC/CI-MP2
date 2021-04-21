@@ -252,8 +252,8 @@ button {
     .carD,
     .up,
     .hidden {
-        height: 73px;
-        width: 55px;
+        height: 65px;
+        width: 50px;
     }
     .carD {
         position: relative;
