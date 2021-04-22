@@ -9,6 +9,10 @@
 
 # Pairs game to help teach aspects of sailing and associated knowledge to kids.
 
+### Note to assessors on Project Submission relating back to MP1
+
+>As well as producing this project for MP2, during this module I have also taken my MP1 project forward to a deployed Commercial Site (www.mlbowen.com on GitHub Pages) based on incorporating some of the other learning objectives for the last two modules, in particular the coding and deployment of EmailJS and the inclusion of the Google Analytics API, as well as other improvements based on the UX feedback from the Assessors.
+
 
 ## Background Description
 
@@ -26,7 +30,7 @@ The objective is to find all the matching pairs of face down cards as fast as po
 
 I produced a Planes Analysis before starting the project, which sets out the purpose and objectives of the project. This document can be read by clicking this link and in part covers some aspects not covered in this document itself:
 
- * [Sailing Pairs Game Planes Analysis](https://github.com/KieronOC/CI-MP1/blob/master/background_work/Planes%20Analysis-ML%20Bowen%20Website.pdf)
+ * [Sailing Pairs Game Planes Analysis](https://github.com/KieronOC/CI-MP2/blob/master/assets/background/MP2%20-%20Planes%20Analysis.pdf)
 
 I also constructed a basic wireframe document prior to starting to write the code, which is set out in the above document.
 
@@ -111,6 +115,8 @@ Other observations from testing it myself are :
 
 * Making even better use of screen space on smaller screen sizes
 * Having cards slightly expand in size on opening to make it easier to see them whilst not masking their location, which is he key part of solving the game.
+* More work is needed to make a more seemless transition between different screen sizes. It is relatively smooth, the main issue is flipping between landscape and portfolio view on larger mobile devices.
+* It was also noted that Chrome Developer Tools does not appear to create an accurante emulation of some devices as there were notable space useage issues after testing on a real device, which were then corrected.
 
 ![(9 year old test)](assets/images/uxtest.jpg )
 
@@ -120,8 +126,8 @@ Other observations from testing it myself are :
 I have tested the code as follows:
 
 1. Manually myself by playing the game repeadetly with Chrome Developer Tools open to see the Javacript outputs doing as they were intended.
-2. I have gone through and put comprehensive notes in the code for the purposes of this submission to ensure of a full understanding.
-3. My mentor pointed out a few issues with the use of VAR variables and quotation mark use which have been fixed.
+2. I have gone through and put comprehensive notes in the code for the purposes of this submission to ensure a full understanding of the flow.
+3. My mentor pointed out a few issues with the use of VAR variables and quotation marks, which have been fixed.
 4. All Console.Log statements have been removed.
 5. Each language type has been put through the following code validators:
 
@@ -130,7 +136,7 @@ I have tested the code as follows:
      * JS   :https://jshint.com/
      * JS   :https://beautifier.io/ (On the recommendation of my mentor)
 
-    All the errors found in these checks have been corrected to the best of my current abilities, but not necessarily all the warnings of which there were a few. All warnings in connection with CDNs have not been dealt with.
+    All the errors found in these checks have been corrected to the best of my current abilities. All warnings in connection with CDNs have not been dealt with.
 
 #### Bugs
 
@@ -181,9 +187,9 @@ Suggestions in this report will need more knowledge to implement but it seems th
 
 I have pushed all the code to GITHUB and have published the main branch (there is only a main branch) at https://kieronoc.github.io/CI-MP2/.
 
-I have forked it for this Code Institute submission
+I am the only contributor.
 
-This link opens the website from all the devices I have tested it on.
+This link opens the website from all the devices I have tested it on and that others have opened it from as well.
 
 
 ## 7. Credits
@@ -197,6 +203,9 @@ I have put specific citations in notes in the index.html file that show where sp
 | 1.  	|HTML, CSS & Bootstrap          	| www.w3schools.com	            	|Beyond the knowledge learnt on the course so far, I used this site a lot to understand how to do small things with the code such as align and center information in the grid. More specific references are noted in the code.         	|
 | 2.  	|Bootstrap         	|https://getbootstrap.com             	|To learn how to use the code attributes and understand how they worked and could be applied.         	|
 | 3.  	|Javascript         	|https://developer.mozilla.org/en-US/docs/Web/JavaScript             	|To learn how to use the code attributes and understand how they worked and could be applied.         	|
+
+jQuery was not used in this project.
+
 <br>
 
 
@@ -213,11 +222,11 @@ I have put specific citations in notes in the index.html file that show where sp
 
 > ### 7.3 Content
 
-All the script content was written by the therapist, Mary Lou O'Connell
+All the word content was written by Kieron O'Connell
 
 > ### 7.4 Acknowledgements
 
-I acknowledge all the help of the Code Institute Tutors and mentor, Allen, for their help so far. As well as the help from fellow students via Slack.
+I acknowledge all the help of the Code Institute Tutors and mentor, Aaron, for their help so far. As well as the help from fellow students via Slack.
 
 
 END
