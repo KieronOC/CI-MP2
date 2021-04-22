@@ -23,6 +23,9 @@ This product is a Pairs Matching game (also known as Pelmanism) with one set of 
 * At the same time expand their vocabulary on dinghy types in this first case, but in the future, as set out below, a wider range of sailing knowledge.
 * To have fun in the process.
 
+
+To play the game click on this link and have fun : https://kieronoc.github.io/CI-MP2/
+
 <br>
 
 ## Code
@@ -61,7 +64,7 @@ The objective is to find all the matching pairs of face down cards as fast as po
 
 I produced a Planes Analysis before starting the project, which sets out the purpose and objectives of the project and intended key design elements and code logic. This document can be read by clicking this link and in part covers some aspects not covered in this document itself:
 
- * [Sailing Pairs Game Planes Analysis](https://github.com/KieronOC/CI-MP2/blob/master/assets/background/MP2%20-%20Planes%20Analysis.pdf)
+ * [Sailing Pairs Game - Planes Analysis](https://github.com/KieronOC/CI-MP2/blob/master/assets/background/MP2%20-%20Planes%20Analysis.pdf)
 
 I also constructed a basic wireframe document prior to starting to write the code, which is set out in the above document.
 
@@ -83,7 +86,7 @@ The main feature of the game, the cards themselves, have been designed to resize
 
 > ### 3.1 Existing Features
 >
-The game has the following main features :
+The site / game has the following main features :
 
 <u>Starting Page</u>
 
@@ -146,11 +149,11 @@ A logical development process from this version is set out in the Planes Analysi
 | No. 	| Code Area 	| Code Source 	| Comment 	|
 |-----	|-----------	|-------------	|---------	|
 | 1.  	|Bootstrap 4          	| www.bootstrap.com	            	|For layout and styling.         	|
-| 2.  	|Fontawesome          	|www.fontaweseome.com         	|For Social media logos.         	|
-| 3.  	|HTML          	|	             	|Main language used.         	|
+| 2.  	|Fontawesome          	|www.fontaweseome.com         	|         	|
+| 3.  	|HTML          	|	             	|For game layout         	|
 | 4.  	|CSS          	|             	|For overriding Bootstrap and creating specific styles.         	|
 | 5.  	|Javascript          	|             	|For running game logic and changing HTML and CSS in line with user decisions and game progress.         	|
-| 6.    |Google Fonts|https://developers.google.com/fonts|Fonts but not used specifically.|
+| 6.    |Google Fonts|https://developers.google.com/fonts|Surfer font|
 
 <br>
 

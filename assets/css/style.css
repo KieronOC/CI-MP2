@@ -45,7 +45,6 @@ body {
 }
 
 .dClock {
-    /* background-color: #1c7ab585; */
     color: #dcddee;
     text-align: right;
     width: 300px;
@@ -79,6 +78,7 @@ body {
 }
 
 #stopwatch {
+    /* Adapted from W3 schools */
     background-image: linear-gradient(to bottom right, rgb(225, 0, 255), rgb(237, 240, 245), rgb(189, 130, 238));
     color: #1d0d1b;
     max-width: 200px;
