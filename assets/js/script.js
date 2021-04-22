@@ -1,11 +1,10 @@
-//All code written by KJOC referencing CI Materials, Bootrap 4 Documentation online W3Schools and MDN, as well as other sources specifically referred to to help understand how to make it work.
+//All code written by KJOC referencing CI Materials, W3Schools and MDN, as well as other sources specifically referred to to help understand how to make it work.
 //Except where specifcally mentioned no other code has been copied and pasted from any other source without understanding what it is doing and referencing it below.
 
 // Checks page has loaded. Part of CI course materials
 document.addEventListener("DOMContentLoaded", function() {});
 
 // Displays the time : Learning source and some code from : https://www.codesdope.com/blog/article/ow-to-create-a-digital-clock-using-javascript/
-
 function currentTime() {
     let date = new Date();
     let hour = date.getHours();
@@ -134,9 +133,8 @@ let pictures = [{
 // The next iteration is planned to include sets of cards for; boat parts, sail parts, knots, clouds, wind strengths and perhaps basic rules of the road amoungst others.
 
 
-
 // The following code sets the time that cards will stay visible if a matching pair is not found. The user can click one of three buttons on the game start page; Slow, Medium or Quick, which sets the <delayMiss> variable to one of three different delays; 2sec, 1sec or 0.5sec.
-// The default is 2 seconds and if no button is pressed and the game will be played at this card turn back speed. This was altered on a UX test with a 9 year old. The first set of speeds were set at 6sec, 3sec and 1sec and it caused instant frustration. The aim is to add 4th game speed button that will allow the user to play at their own pace, by having to click back on unmatched cards to hide them again and keep playing which mimics the real life card version.
+// The default is 2 seconds and if no button is pressed and the game will be played at this card turn back speed. 
 
 let delayM = 400;
 let delayMiss = 2000;
@@ -194,8 +192,7 @@ let start = document.querySelector('#start');
 // Button to start timer.
 start.addEventListener('click', timedCount);
 
-// Remove Jumbotron and add game instruction before adding cards to screen. Add small instructional piece at top of game page, which came about from an older user not being sure what to do when the cards appeared.
-
+// Remove Jumbotron and add game instruction before adding cards to screen. 
 start.addEventListener('click', removeJumbo);
 
 function removeJumbo() {
@@ -253,7 +250,7 @@ function timedCount() {
     t = setTimeout(timedCount, 1000);
 }
 
-// Gets the player to in effect refresh the page before pressing the Start button to start the timer and shuffle the cards
+// Allows the player to restart and get back the start page at any time
 let newGame = document.getElementById('reStart');
 newGame.addEventListener('click', refresh);
 
@@ -262,7 +259,8 @@ function refresh() {
 }
 
 let box = document.getElementById('cardBox');
-//Durstenfeld shuffle from Stackoverflow at :
+
+// Shuffle method from Durstenfeld re from Stackoverflow at :
 // https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array.
 
 let mixedUpPics;
@@ -323,7 +321,7 @@ let previousTarget = null;
 //The variable will hold the event of a card being clicked
 let choice;
 
-// This variable is declared to count the numbers of matched pairs selected so that the point the game is complete is fired leading to the game complete message screen appearing. f<wellDone> at the bottom.
+// This variable is declared to count the numbers of matched pairs selected so that at the point the game is completed it is fired leading to the game complete message screen appearing. f<wellDone> at the bottom.
 let correct = 0;
 
 // This next section is the main engine of the game. It sets a for loop through the above array of divs containing the cards now populated on screen waiting for the user to click or tap them.
@@ -354,16 +352,19 @@ box.addEventListener('click', function(event) {
             // At this point the programme will jump to the end of the play function and fire again at Line 185
 
         } else {
-            // The function will re enter the if statement at line 189 and add 1 to it at line 191 making it 2, so it will jump the condition at 193 and go straight to the else statement at 202 where the 2nd guess will be recorded in the same way as the first.
             guess2 = choice.parentNode.classList.item(1);
             choice.classList.add('guess');
             choice.classList.remove('hidden');
             // We now have two guesses recorded so we now need to collect the two elements with classes of 'guess' and check if the guess1 and guess2 variables are the same.
+            // The cards are shown or hidden by changing the CSS selector of the two main identically sized divs. The starting postition is created by use of the z-index in the CSS file to force the back of cards to be on top.
+            // The code is then set inside timeout functions so that delays can be set after two cards have been selected.
+
         }
         let bothCards = document.querySelectorAll('.guess');
         if (guess1 !== '' && guess2 !== '') {
             if (guess1 === guess2) {
                 setTimeout(function() {
+                    // Hides cards if matched
                     for (let i = 0; i < bothCards.length; i++) {
                         bothCards[i].previousSibling.classList
                             .remove('up');
@@ -371,7 +372,7 @@ box.addEventListener('click', function(event) {
                             .innerText = '';
                     }
                     correct += 1;
-                    // Check if all pairs found
+                    // Check if all pairs found and get out of if logic it they have and go to f(wellDone)
                     if (correct === 12) {
                         clearTimeout(t);
                         return wellDone();
@@ -380,6 +381,7 @@ box.addEventListener('click', function(event) {
                     }
                 }, delayM);
                 setTimeout(function() {
+                    // Removes the selection class if both matched and resets counter
                     guess1 = '';
                     guess2 = '';
                     counter = 0;
@@ -391,6 +393,7 @@ box.addEventListener('click', function(event) {
 
             } else {
                 setTimeout(function() {
+                    // Turns cards back over if unmatched and resets counter
                     guess1 = '';
                     guess2 = '';
                     counter = 0;
